@@ -14,6 +14,7 @@
 		6DB9EEB21B18124700355150 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DB9EEB11B18124700355150 /* Images.xcassets */; };
 		6DB9EEB51B18124700355150 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB9EEB31B18124700355150 /* LaunchScreen.xib */; };
 		6DB9EEC11B18124700355150 /* T8ChatUIKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEC01B18124700355150 /* T8ChatUIKitDemoTests.m */; };
+		AB8B6FF61DAEBA5B1AA6448C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BBE88807061CFD22E20D14 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		440CBD223E5A5A3418A9B5C8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5A11D6FE2963C4D55137965B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6DB9EEA11B18124700355150 /* T8ChatUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T8ChatUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB9EEA51B18124700355150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DB9EEA61B18124700355150 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		6DB9EEBA1B18124700355150 /* T8ChatUIKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = T8ChatUIKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB9EEBF1B18124700355150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DB9EEC01B18124700355150 /* T8ChatUIKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = T8ChatUIKitDemoTests.m; sourceTree = "<group>"; };
+		D6BBE88807061CFD22E20D14 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8B6FF61DAEBA5B1AA6448C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C63E9D635373D8F933C734A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6BBE88807061CFD22E20D14 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6DB9EE981B18124700355150 = {
 			isa = PBXGroup;
 			children = (
 				6DB9EEA31B18124700355150 /* T8ChatUIKitDemo */,
 				6DB9EEBD1B18124700355150 /* T8ChatUIKitDemoTests */,
 				6DB9EEA21B18124700355150 /* Products */,
+				967730BAA5576E21BD31B474 /* Pods */,
+				1C63E9D635373D8F933C734A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +134,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		967730BAA5576E21BD31B474 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				440CBD223E5A5A3418A9B5C8 /* Pods.debug.xcconfig */,
+				5A11D6FE2963C4D55137965B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6DB9EEC41B18124700355150 /* Build configuration list for PBXNativeTarget "T8ChatUIKitDemo" */;
 			buildPhases = (
+				9DBA77E0AFD67A0468286CCB /* Check Pods Manifest.lock */,
 				6DB9EE9D1B18124700355150 /* Sources */,
 				6DB9EE9E1B18124700355150 /* Frameworks */,
 				6DB9EE9F1B18124700355150 /* Resources */,
+				AF5BBCEAE125C2434380438F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9DBA77E0AFD67A0468286CCB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AF5BBCEAE125C2434380438F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6DB9EE9D1B18124700355150 /* Sources */ = {
@@ -341,6 +400,7 @@
 		};
 		6DB9EEC51B18124700355150 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 440CBD223E5A5A3418A9B5C8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = T8ChatUIKitDemo/Info.plist;
@@ -351,6 +411,7 @@
 		};
 		6DB9EEC61B18124700355150 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A11D6FE2963C4D55137965B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = T8ChatUIKitDemo/Info.plist;
@@ -412,6 +473,7 @@
 				6DB9EEC61B18124700355150 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6DB9EEC71B18124700355150 /* Build configuration list for PBXNativeTarget "T8ChatUIKitDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +482,7 @@
 				6DB9EEC91B18124700355150 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

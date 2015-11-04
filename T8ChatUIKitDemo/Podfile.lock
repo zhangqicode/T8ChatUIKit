@@ -1,0 +1,31 @@
+PODS:
+  - Masonry (0.6.3)
+  - T8TableViewForm (0.0.1):
+    - Masonry (~> 0.6.1)
+    - T8TableViewForm/Cells (= 0.0.1)
+    - T8TableViewForm/Items (= 0.0.1)
+    - T8TableViewForm/Views (= 0.0.1)
+  - T8TableViewForm/Cells (0.0.1):
+    - Masonry (~> 0.6.1)
+  - T8TableViewForm/Items (0.0.1):
+    - Masonry (~> 0.6.1)
+  - T8TableViewForm/Views (0.0.1):
+    - Masonry (~> 0.6.1)
+
+DEPENDENCIES:
+  - T8TableViewForm (from `https://github.com/zhangqippp/T8TableViewForm.git`)
+
+EXTERNAL SOURCES:
+  T8TableViewForm:
+    :git: https://github.com/zhangqippp/T8TableViewForm.git
+
+CHECKOUT OPTIONS:
+  T8TableViewForm:
+    :commit: e393447769b7d47bd4264a300b93ce40babced3b
+    :git: https://github.com/zhangqippp/T8TableViewForm.git
+
+SPEC CHECKSUMS:
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  T8TableViewForm: 4837c838bf37717d7a77207e95ac04235df7c828
+
+COCOAPODS: 0.38.2

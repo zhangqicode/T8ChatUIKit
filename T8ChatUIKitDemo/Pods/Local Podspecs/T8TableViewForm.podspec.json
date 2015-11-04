@@ -1,0 +1,36 @@
+{
+  "name": "T8TableViewForm",
+  "version": "0.0.1",
+  "summary": "A simple menu form make from tableview",
+  "description": "A longer description of T8TableViewForm in Markdown format.\n\n* Think: Why did you write this? What is the focus? What does it do?\n* CocoaPods will be using this to generate tags, and improve search results.\n* Try to keep it short, snappy and to the point.\n* Finally, don't worry about the indent, CocoaPods strips it!",
+  "homepage": "https://github.com/zhangqippp/T8TableViewForm",
+  "license": "MIT (example)",
+  "authors": {
+    "zhangqippp": "archerzq@126.com"
+  },
+  "source": {
+    "git": "https://github.com/zhangqippp/T8TableViewForm.git",
+    "commit": "d2c87416664670d4dbe1ec2a1faa0b0c9867fd5c"
+  },
+  "source_files": "T8TableViewForm/*.{h,m}",
+  "exclude_files": "Classes/Exclude",
+  "dependencies": {
+    "Masonry": [
+      "~> 0.6.1"
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "Cells",
+      "source_files": "T8TableViewForm/Cells/*.{h,m}"
+    },
+    {
+      "name": "Items",
+      "source_files": "T8TableViewForm/Items/*.{h,m}"
+    },
+    {
+      "name": "Views",
+      "source_files": "T8TableViewForm/Views/*.{h,m}"
+    }
+  ]
+}
