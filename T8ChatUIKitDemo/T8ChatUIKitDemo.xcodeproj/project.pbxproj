@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6DB9EEA71B18124700355150 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEA61B18124700355150 /* main.m */; };
+		6DB9EEAA1B18124700355150 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEA91B18124700355150 /* AppDelegate.m */; };
+		6DB9EEAD1B18124700355150 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEAC1B18124700355150 /* ViewController.m */; };
+		6DB9EEB01B18124700355150 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DB9EEAE1B18124700355150 /* Main.storyboard */; };
+		6DB9EEB21B18124700355150 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DB9EEB11B18124700355150 /* Images.xcassets */; };
+		6DB9EEB51B18124700355150 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB9EEB31B18124700355150 /* LaunchScreen.xib */; };
+		6DB9EEC11B18124700355150 /* T8ChatUIKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEC01B18124700355150 /* T8ChatUIKitDemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6DB9EEBB1B18124700355150 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DB9EE991B18124700355150 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DB9EEA01B18124700355150;
+			remoteInfo = T8ChatUIKitDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6DB9EEA11B18124700355150 /* T8ChatUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T8ChatUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB9EEA51B18124700355150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DB9EEA61B18124700355150 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6DB9EEA81B18124700355150 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6DB9EEA91B18124700355150 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6DB9EEAB1B18124700355150 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6DB9EEAC1B18124700355150 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6DB9EEAF1B18124700355150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6DB9EEB11B18124700355150 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6DB9EEB41B18124700355150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6DB9EEBA1B18124700355150 /* T8ChatUIKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = T8ChatUIKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB9EEBF1B18124700355150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DB9EEC01B18124700355150 /* T8ChatUIKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = T8ChatUIKitDemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6DB9EE9E1B18124700355150 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DB9EEB71B18124700355150 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DB9EE981B18124700355150 = {
+			isa = PBXGroup;
+			children = (
+				6DB9EEA31B18124700355150 /* T8ChatUIKitDemo */,
+				6DB9EEBD1B18124700355150 /* T8ChatUIKitDemoTests */,
+				6DB9EEA21B18124700355150 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6DB9EEA21B18124700355150 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DB9EEA11B18124700355150 /* T8ChatUIKitDemo.app */,
+				6DB9EEBA1B18124700355150 /* T8ChatUIKitDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DB9EEA31B18124700355150 /* T8ChatUIKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6DB9EEA81B18124700355150 /* AppDelegate.h */,
+				6DB9EEA91B18124700355150 /* AppDelegate.m */,
+				6DB9EEAB1B18124700355150 /* ViewController.h */,
+				6DB9EEAC1B18124700355150 /* ViewController.m */,
+				6DB9EEAE1B18124700355150 /* Main.storyboard */,
+				6DB9EEB11B18124700355150 /* Images.xcassets */,
+				6DB9EEB31B18124700355150 /* LaunchScreen.xib */,
+				6DB9EEA41B18124700355150 /* Supporting Files */,
+			);
+			path = T8ChatUIKitDemo;
+			sourceTree = "<group>";
+		};
+		6DB9EEA41B18124700355150 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DB9EEA51B18124700355150 /* Info.plist */,
+				6DB9EEA61B18124700355150 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DB9EEBD1B18124700355150 /* T8ChatUIKitDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				6DB9EEC01B18124700355150 /* T8ChatUIKitDemoTests.m */,
+				6DB9EEBE1B18124700355150 /* Supporting Files */,
+			);
+			path = T8ChatUIKitDemoTests;
+			sourceTree = "<group>";
+		};
+		6DB9EEBE1B18124700355150 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DB9EEBF1B18124700355150 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6DB9EEA01B18124700355150 /* T8ChatUIKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DB9EEC41B18124700355150 /* Build configuration list for PBXNativeTarget "T8ChatUIKitDemo" */;
+			buildPhases = (
+				6DB9EE9D1B18124700355150 /* Sources */,
+				6DB9EE9E1B18124700355150 /* Frameworks */,
+				6DB9EE9F1B18124700355150 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = T8ChatUIKitDemo;
+			productName = T8ChatUIKitDemo;
+			productReference = 6DB9EEA11B18124700355150 /* T8ChatUIKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6DB9EEB91B18124700355150 /* T8ChatUIKitDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DB9EEC71B18124700355150 /* Build configuration list for PBXNativeTarget "T8ChatUIKitDemoTests" */;
+			buildPhases = (
+				6DB9EEB61B18124700355150 /* Sources */,
+				6DB9EEB71B18124700355150 /* Frameworks */,
+				6DB9EEB81B18124700355150 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DB9EEBC1B18124700355150 /* PBXTargetDependency */,
+			);
+			name = T8ChatUIKitDemoTests;
+			productName = T8ChatUIKitDemoTests;
+			productReference = 6DB9EEBA1B18124700355150 /* T8ChatUIKitDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DB9EE991B18124700355150 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "琦张";
+				TargetAttributes = {
+					6DB9EEA01B18124700355150 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					6DB9EEB91B18124700355150 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 6DB9EEA01B18124700355150;
+					};
+				};
+			};
+			buildConfigurationList = 6DB9EE9C1B18124700355150 /* Build configuration list for PBXProject "T8ChatUIKitDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6DB9EE981B18124700355150;
+			productRefGroup = 6DB9EEA21B18124700355150 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6DB9EEA01B18124700355150 /* T8ChatUIKitDemo */,
+				6DB9EEB91B18124700355150 /* T8ChatUIKitDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6DB9EE9F1B18124700355150 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DB9EEB01B18124700355150 /* Main.storyboard in Resources */,
+				6DB9EEB51B18124700355150 /* LaunchScreen.xib in Resources */,
+				6DB9EEB21B18124700355150 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DB9EEB81B18124700355150 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6DB9EE9D1B18124700355150 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DB9EEAD1B18124700355150 /* ViewController.m in Sources */,
+				6DB9EEAA1B18124700355150 /* AppDelegate.m in Sources */,
+				6DB9EEA71B18124700355150 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DB9EEB61B18124700355150 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DB9EEC11B18124700355150 /* T8ChatUIKitDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6DB9EEBC1B18124700355150 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6DB9EEA01B18124700355150 /* T8ChatUIKitDemo */;
+			targetProxy = 6DB9EEBB1B18124700355150 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6DB9EEAE1B18124700355150 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DB9EEAF1B18124700355150 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6DB9EEB31B18124700355150 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DB9EEB41B18124700355150 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6DB9EEC21B18124700355150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6DB9EEC31B18124700355150 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6DB9EEC51B18124700355150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = T8ChatUIKitDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6DB9EEC61B18124700355150 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = T8ChatUIKitDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6DB9EEC81B18124700355150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = T8ChatUIKitDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/T8ChatUIKitDemo.app/T8ChatUIKitDemo";
+			};
+			name = Debug;
+		};
+		6DB9EEC91B18124700355150 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = T8ChatUIKitDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/T8ChatUIKitDemo.app/T8ChatUIKitDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6DB9EE9C1B18124700355150 /* Build configuration list for PBXProject "T8ChatUIKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DB9EEC21B18124700355150 /* Debug */,
+				6DB9EEC31B18124700355150 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DB9EEC41B18124700355150 /* Build configuration list for PBXNativeTarget "T8ChatUIKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DB9EEC51B18124700355150 /* Debug */,
+				6DB9EEC61B18124700355150 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6DB9EEC71B18124700355150 /* Build configuration list for PBXNativeTarget "T8ChatUIKitDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DB9EEC81B18124700355150 /* Debug */,
+				6DB9EEC91B18124700355150 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DB9EE991B18124700355150 /* Project object */;
+}
