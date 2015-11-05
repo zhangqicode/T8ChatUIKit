@@ -14,6 +14,7 @@
 		6DB9EEB21B18124700355150 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DB9EEB11B18124700355150 /* Images.xcassets */; };
 		6DB9EEB51B18124700355150 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB9EEB31B18124700355150 /* LaunchScreen.xib */; };
 		6DB9EEC11B18124700355150 /* T8ChatUIKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEC01B18124700355150 /* T8ChatUIKitDemoTests.m */; };
+		6DDC0CF51BEAF8AA009488B2 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDC0CF41BEAF8AA009488B2 /* Reveal.framework */; settings = {ASSET_TAGS = (); }; };
 		AB8B6FF61DAEBA5B1AA6448C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BBE88807061CFD22E20D14 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		6DB9EEBA1B18124700355150 /* T8ChatUIKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = T8ChatUIKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB9EEBF1B18124700355150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DB9EEC01B18124700355150 /* T8ChatUIKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = T8ChatUIKitDemoTests.m; sourceTree = "<group>"; };
+		6DDC0CF41BEAF8AA009488B2 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		D6BBE88807061CFD22E20D14 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -52,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB8B6FF61DAEBA5B1AA6448C /* libPods.a in Frameworks */,
+				6DDC0CF51BEAF8AA009488B2 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +99,7 @@
 		6DB9EEA31B18124700355150 /* T8ChatUIKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6DDC0CF41BEAF8AA009488B2 /* Reveal.framework */,
 				6DB9EEA81B18124700355150 /* AppDelegate.h */,
 				6DB9EEA91B18124700355150 /* AppDelegate.m */,
 				6DB9EEAB1B18124700355150 /* ViewController.h */,
@@ -403,8 +407,25 @@
 			baseConfigurationReference = 440CBD223E5A5A3418A9B5C8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/T8ChatUIKitDemo",
+				);
 				INFOPLIST_FILE = T8ChatUIKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-l\"T8TableViewForm\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -414,8 +435,25 @@
 			baseConfigurationReference = 5A11D6FE2963C4D55137965B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/T8ChatUIKitDemo",
+				);
 				INFOPLIST_FILE = T8ChatUIKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-l\"T8TableViewForm\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

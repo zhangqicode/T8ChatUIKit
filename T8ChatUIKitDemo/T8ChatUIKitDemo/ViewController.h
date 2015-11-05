@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "T8TableViewForm.h"
+
+@interface ViewController : T8MenuTableViewController
 
 
 @end

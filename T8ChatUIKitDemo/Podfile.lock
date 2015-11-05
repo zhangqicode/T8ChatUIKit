@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   T8TableViewForm:
-    :commit: e393447769b7d47bd4264a300b93ce40babced3b
+    :commit: 07b149491038984716960f1cf9744595355b22b8
     :git: https://github.com/zhangqippp/T8TableViewForm.git
 
 SPEC CHECKSUMS:

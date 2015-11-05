@@ -8,7 +8,10 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<T8MenuItemDelegate>
+
+@property (strong, nonatomic) T8MenuTitleItem *chatItem;
+@property (strong, nonatomic) T8MenuSection *chatSection;
 
 @end
 
@@ -16,12 +19,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"T8ChatUIKitDemo";
+    
+    self.chatItem = [[T8MenuTitleItem alloc] initWithTitle:@"对话" indicator:YES];
+    self.chatSection = [[T8MenuSection alloc] init];
+    self.chatSection.sectionEdgeInsets = UIEdgeInsetsMake(20, 0, 20, 0);
+    [self.chatSection addMenuItem:self.chatItem];
+    [self.menuSections addObject:self.chatSection];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - T8MenuItemDelegate
+- (void)recieveMenuItemEvent:(NSString *)path item:(T8MenuItem *)item
+{
+    if ([path isEqualToString:T8MenuTitleItemTap]) {
+        if (item == self.chatItem) {
+            NSLog(@"enter chat...");
+        }
+    }
 }
 
 @end

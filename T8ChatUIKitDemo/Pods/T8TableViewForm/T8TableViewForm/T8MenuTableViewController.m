@@ -20,6 +20,8 @@
     
     [self.view addSubview:self.tableView];
     
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     self.view.backgroundColor = [UIColor colorWithRed:236/255.0 green:236/255.0 blue:236/255.0 alpha:1];
 }
 
