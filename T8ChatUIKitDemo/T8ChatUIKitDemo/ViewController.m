@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "T8ChatViewController.h"
 
 @interface ViewController ()<T8MenuItemDelegate>
 
@@ -41,7 +42,8 @@
 {
     if ([path isEqualToString:T8MenuTitleItemTap]) {
         if (item == self.chatItem) {
-            NSLog(@"enter chat...");
+            T8ChatViewController *chat = [[T8ChatViewController alloc] init];
+            [self.navigationController pushViewController:chat animated:YES];
         }
     }
 }
