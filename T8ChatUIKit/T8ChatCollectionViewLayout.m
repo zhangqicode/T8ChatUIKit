@@ -7,10 +7,12 @@
 //
 
 #import "T8ChatCollectionViewLayout.h"
+#import "T8MessageModel.h"
 
 @interface T8ChatCollectionViewLayout ()
 {
     NSMutableArray *_layoutAttributes;
+    CGSize _contentSize;
 }
 
 @end
@@ -28,18 +30,25 @@
 
 - (void)prepareLayout
 {
-    if (_layoutAttributes.count == 0) {
-        for (int i=0; i<30; i++) {
-            UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
-            attributes.frame = CGRectMake(0, i*50, self.collectionView.bounds.size.width, 50);
-            [_layoutAttributes addObject:attributes];
-        }
-    }
+    [_layoutAttributes removeAllObjects];
+    
+    NSArray *items = [((id<T8ChatCollectionViewLayoutDelegate>)self.collectionView.delegate) items];
+    __block CGFloat contentHeight = 0.0f;
+    CGSize containerSize = CGSizeMake(self.collectionView.bounds.size.width, 0);
+    [items enumerateObjectsUsingBlock:^(T8MessageModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        CGSize msgSize = [obj sizeForContainerSize:containerSize];
+        UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]];
+        attributes.frame = CGRectMake(0, contentHeight, msgSize.width, msgSize.height);
+        [_layoutAttributes addObject:attributes];
+        contentHeight += msgSize.height;
+    }];
+    
+    _contentSize = CGSizeMake(self.collectionView.bounds.size.width, contentHeight);
 }
 
 - (CGSize)collectionViewContentSize
 {
-    return CGSizeMake(self.collectionView.bounds.size.width, 1500);
+    return _contentSize;
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath

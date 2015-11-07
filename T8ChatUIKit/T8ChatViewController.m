@@ -10,11 +10,14 @@
 #import "T8ChatCollectionView.h"
 #import "T8ChatCollectionViewLayout.h"
 #import "T8ChatBaseCollectionViewCell.h"
+#import "T8MessageModel.h"
 
-@interface T8ChatViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface T8ChatViewController () <T8ChatCollectionViewLayoutDelegate, UICollectionViewDelegate>
 {
     T8ChatCollectionView *_collectionView;
     T8ChatCollectionViewLayout *_collectionLayout;
+    
+    NSMutableArray *_items;
 }
 
 @end
@@ -26,6 +29,12 @@
     self = [super init];
     if (self) {
         
+        //制作假数据
+        _items = [NSMutableArray array];
+        for (int i = 0; i < 50; i++) {
+            T8MessageModel *model = [[T8MessageModel alloc] init];
+            [_items addObject:model];
+        }
     }
     return self;
 }
@@ -70,7 +79,7 @@
     _collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(64, 0, 0, self.view.bounds.size.width - 7.5);
 }
 
-#pragma mark - UICollectionViewDataSource
+#pragma mark - UICollectionViewDataSource && T8ChatCollectionViewLayoutDelegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;
@@ -78,7 +87,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 30;
+    return _items.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -87,6 +96,11 @@
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"chatCell" forIndexPath:indexPath];
     
     return cell;
+}
+
+- (NSArray *)items
+{
+    return _items;
 }
 
 #pragma mark - UICollectionViewDelegate

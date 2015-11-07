@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol T8ChatCollectionViewLayoutDelegate <UICollectionViewDataSource>
+
+- (NSArray *)items;
+
+@end
+
 @interface T8ChatCollectionViewLayout : UICollectionViewLayout
 
 
