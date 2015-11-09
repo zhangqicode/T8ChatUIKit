@@ -10,4 +10,6 @@
 
 @interface T8ChatBaseCollectionViewCell : UICollectionViewCell
 
+- (UIView *)contentViewForBinding;
+
 @end

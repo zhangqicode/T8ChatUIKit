@@ -27,15 +27,15 @@
         _contentViewForBinding.transform = CGAffineTransformMakeRotation(M_PI);
         [self addSubview:_contentViewForBinding];
         
-        _testLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-        _testLabel.textColor = [UIColor blackColor];
-        _testLabel.text = @"hello world...";
-        _testLabel.layer.borderColor = [[UIColor blackColor] CGColor];
-        _testLabel.layer.borderWidth = 1;
-        [_contentViewForBinding addSubview:_testLabel];
+        self.clipsToBounds = YES;
         
     }
     return self;
+}
+
+- (UIView *)contentViewForBinding
+{
+    return _contentViewForBinding;
 }
 
 @end
