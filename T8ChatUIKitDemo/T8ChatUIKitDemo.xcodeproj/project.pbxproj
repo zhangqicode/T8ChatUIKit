@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D5DD7DD1BF07E240016F2A7 /* T8TextMessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DD7DC1BF07E240016F2A7 /* T8TextMessageViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		6D5DD7E31BF089350016F2A7 /* T8LabelViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DD7E21BF089350016F2A7 /* T8LabelViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		6D5DD7E61BF0A4C60016F2A7 /* T8TextViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DD7E51BF0A4C60016F2A7 /* T8TextViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		6DB9EEA71B18124700355150 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEA61B18124700355150 /* main.m */; };
 		6DB9EEAA1B18124700355150 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEA91B18124700355150 /* AppDelegate.m */; };
 		6DB9EEAD1B18124700355150 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEAC1B18124700355150 /* ViewController.m */; };
@@ -21,6 +24,8 @@
 		6DDC0D021BEB5EAA009488B2 /* T8ChatBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC0D011BEB5EAA009488B2 /* T8ChatBaseCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		6DDC0D051BEC7CAD009488B2 /* T8MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC0D041BEC7CAD009488B2 /* T8MessageModel.m */; settings = {ASSET_TAGS = (); }; };
 		6DDC0D081BEDE2D3009488B2 /* T8BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC0D071BEDE2D3009488B2 /* T8BaseViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		6DDC0D0B1BF05256009488B2 /* T8MessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC0D0A1BF05256009488B2 /* T8MessageItem.m */; settings = {ASSET_TAGS = (); }; };
+		6DDC0D0E1BF05459009488B2 /* T8MessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC0D0D1BF05459009488B2 /* T8MessageViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		AB8B6FF61DAEBA5B1AA6448C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BBE88807061CFD22E20D14 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +42,12 @@
 /* Begin PBXFileReference section */
 		440CBD223E5A5A3418A9B5C8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5A11D6FE2963C4D55137965B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6D5DD7DB1BF07E240016F2A7 /* T8TextMessageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8TextMessageViewModel.h; sourceTree = "<group>"; };
+		6D5DD7DC1BF07E240016F2A7 /* T8TextMessageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8TextMessageViewModel.m; sourceTree = "<group>"; };
+		6D5DD7E11BF089350016F2A7 /* T8LabelViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8LabelViewModel.h; sourceTree = "<group>"; };
+		6D5DD7E21BF089350016F2A7 /* T8LabelViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8LabelViewModel.m; sourceTree = "<group>"; };
+		6D5DD7E41BF0A4C60016F2A7 /* T8TextViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8TextViewModel.h; sourceTree = "<group>"; };
+		6D5DD7E51BF0A4C60016F2A7 /* T8TextViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8TextViewModel.m; sourceTree = "<group>"; };
 		6DB9EEA11B18124700355150 /* T8ChatUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T8ChatUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB9EEA51B18124700355150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DB9EEA61B18124700355150 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +74,10 @@
 		6DDC0D041BEC7CAD009488B2 /* T8MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8MessageModel.m; sourceTree = "<group>"; };
 		6DDC0D061BEDE2D3009488B2 /* T8BaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8BaseViewModel.h; sourceTree = "<group>"; };
 		6DDC0D071BEDE2D3009488B2 /* T8BaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8BaseViewModel.m; sourceTree = "<group>"; };
+		6DDC0D091BF05256009488B2 /* T8MessageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8MessageItem.h; sourceTree = "<group>"; };
+		6DDC0D0A1BF05256009488B2 /* T8MessageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8MessageItem.m; sourceTree = "<group>"; };
+		6DDC0D0C1BF05459009488B2 /* T8MessageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8MessageViewModel.h; sourceTree = "<group>"; };
+		6DDC0D0D1BF05459009488B2 /* T8MessageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8MessageViewModel.m; sourceTree = "<group>"; };
 		D6BBE88807061CFD22E20D14 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +107,33 @@
 				D6BBE88807061CFD22E20D14 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D5DD7DE1BF0812F0016F2A7 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				6D5DD7DF1BF0812F0016F2A7 /* T8LabelViewModel */,
+				6D5DD7E01BF0812F0016F2A7 /* T8TextViewModel */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		6D5DD7DF1BF0812F0016F2A7 /* T8LabelViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6D5DD7E11BF089350016F2A7 /* T8LabelViewModel.h */,
+				6D5DD7E21BF089350016F2A7 /* T8LabelViewModel.m */,
+			);
+			path = T8LabelViewModel;
+			sourceTree = "<group>";
+		};
+		6D5DD7E01BF0812F0016F2A7 /* T8TextViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6D5DD7E41BF0A4C60016F2A7 /* T8TextViewModel.h */,
+				6D5DD7E51BF0A4C60016F2A7 /* T8TextViewModel.m */,
+			);
+			path = T8TextViewModel;
 			sourceTree = "<group>";
 		};
 		6DB9EE981B18124700355150 = {
@@ -172,6 +214,13 @@
 				6DDC0D041BEC7CAD009488B2 /* T8MessageModel.m */,
 				6DDC0D061BEDE2D3009488B2 /* T8BaseViewModel.h */,
 				6DDC0D071BEDE2D3009488B2 /* T8BaseViewModel.m */,
+				6DDC0D091BF05256009488B2 /* T8MessageItem.h */,
+				6DDC0D0A1BF05256009488B2 /* T8MessageItem.m */,
+				6DDC0D0C1BF05459009488B2 /* T8MessageViewModel.h */,
+				6DDC0D0D1BF05459009488B2 /* T8MessageViewModel.m */,
+				6D5DD7DB1BF07E240016F2A7 /* T8TextMessageViewModel.h */,
+				6D5DD7DC1BF07E240016F2A7 /* T8TextMessageViewModel.m */,
+				6D5DD7DE1BF0812F0016F2A7 /* Component */,
 			);
 			name = T8ChatUIKit;
 			path = ../../T8ChatUIKit;
@@ -325,11 +374,16 @@
 				6DB9EEAD1B18124700355150 /* ViewController.m in Sources */,
 				6DDC0D021BEB5EAA009488B2 /* T8ChatBaseCollectionViewCell.m in Sources */,
 				6DB9EEAA1B18124700355150 /* AppDelegate.m in Sources */,
+				6D5DD7E31BF089350016F2A7 /* T8LabelViewModel.m in Sources */,
 				6DDC0CFC1BEB535E009488B2 /* T8ChatCollectionView.m in Sources */,
+				6D5DD7DD1BF07E240016F2A7 /* T8TextMessageViewModel.m in Sources */,
 				6DDC0D081BEDE2D3009488B2 /* T8BaseViewModel.m in Sources */,
+				6DDC0D0E1BF05459009488B2 /* T8MessageViewModel.m in Sources */,
+				6DDC0D0B1BF05256009488B2 /* T8MessageItem.m in Sources */,
 				6DDC0D051BEC7CAD009488B2 /* T8MessageModel.m in Sources */,
 				6DDC0CFF1BEB5383009488B2 /* T8ChatCollectionViewLayout.m in Sources */,
 				6DB9EEA71B18124700355150 /* main.m in Sources */,
+				6D5DD7E61BF0A4C60016F2A7 /* T8TextViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

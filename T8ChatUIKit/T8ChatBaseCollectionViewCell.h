@@ -10,6 +10,8 @@
 
 @interface T8ChatBaseCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, strong) id boundItem;
+
 - (UIView *)contentViewForBinding;
 
 @end

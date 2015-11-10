@@ -11,6 +11,7 @@
 #import "T8ChatCollectionViewLayout.h"
 #import "T8ChatBaseCollectionViewCell.h"
 #import "T8MessageModel.h"
+#import "T8MessageItem.h"
 
 @interface T8ChatViewController () <T8ChatCollectionViewLayoutDelegate, UICollectionViewDelegate>
 {
@@ -33,7 +34,8 @@
         _items = [NSMutableArray array];
         for (int i = 0; i < 50; i++) {
             T8MessageModel *model = [[T8MessageModel alloc] init];
-            [_items addObject:model];
+            T8MessageItem *item = [[T8MessageItem alloc] initWithMessage:model];
+            [_items addObject:item];
         }
     }
     return self;
@@ -92,8 +94,18 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    T8ChatBaseCollectionViewCell *cell = nil;
-    cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"chatCell" forIndexPath:indexPath];
+    T8MessageItem *item = _items[indexPath.row];
+    
+    __block T8ChatBaseCollectionViewCell *cell = nil;
+    [UIView performWithoutAnimation:^{
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"chatCell" forIndexPath:indexPath];
+        if (cell.boundItem != nil) {
+            [cell.boundItem unbindCell];
+        }
+        [item bindCell:cell];
+    }];
+    
+    
     
     return cell;
 }

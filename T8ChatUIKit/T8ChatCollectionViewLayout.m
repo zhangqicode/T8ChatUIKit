@@ -7,7 +7,7 @@
 //
 
 #import "T8ChatCollectionViewLayout.h"
-#import "T8MessageModel.h"
+#import "T8MessageItem.h"
 
 @interface T8ChatCollectionViewLayout ()
 {
@@ -35,7 +35,7 @@
     NSArray *items = [((id<T8ChatCollectionViewLayoutDelegate>)self.collectionView.delegate) items];
     __block CGFloat contentHeight = 0.0f;
     CGSize containerSize = CGSizeMake(self.collectionView.bounds.size.width, 0);
-    [items enumerateObjectsUsingBlock:^(T8MessageModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [items enumerateObjectsUsingBlock:^(T8MessageItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         CGSize msgSize = [obj sizeForContainerSize:containerSize];
         UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]];
         attributes.frame = CGRectMake(0, contentHeight, msgSize.width, msgSize.height);

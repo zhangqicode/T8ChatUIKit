@@ -19,6 +19,59 @@
 
 @implementation T8BaseViewModel
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _alpha = 1.0f;
+    }
+    return self;
+}
+
+- (bool)hasNoView
+{
+    return _modelFlags.hasNoView;
+}
+
+- (void)setHasNoView:(bool)hasNoView
+{
+    _modelFlags.hasNoView = hasNoView;
+}
+
+- (bool)skipDrawInContext
+{
+    return _modelFlags.skipDrawInContext;
+}
+
+- (void)setSkipDrawInContext:(bool)skipDrawInContext
+{
+    _modelFlags.skipDrawInContext = skipDrawInContext;
+}
+
+- (bool)disableSubmodelAutomaticBinding
+{
+    return _modelFlags.disableSubmodelAutomaticBinding;
+}
+
+- (void)setDisableSubmodelAutomaticBinding:(bool)disableSubmodelAutomaticBinding
+{
+    _modelFlags.disableSubmodelAutomaticBinding = disableSubmodelAutomaticBinding;
+}
+
+- (bool)viewUserInteractionDisabled
+{
+    return _modelFlags.viewUserInteractionDisabled;
+}
+
+- (void)setViewUserInteractionDisabled:(bool)viewUserInteractionDisabled
+{
+    if (_modelFlags.viewUserInteractionDisabled != viewUserInteractionDisabled)
+    {
+        _modelFlags.viewUserInteractionDisabled = viewUserInteractionDisabled;
+        _view.userInteractionEnabled = !viewUserInteractionDisabled;
+    }
+}
+
 #pragma mark - method
 - (void)bindViewToContainer:(UIView *)container
 {
@@ -54,6 +107,80 @@
 - (Class)viewClass
 {
     return nil;
+}
+
+- (void)addSubmodel:(T8BaseViewModel *)model
+{
+    if (model == nil) {
+        return;
+    }
+    
+    if (_submodels == nil) {
+        _submodels = [NSMutableArray array];
+    }
+    
+    [_submodels addObject:model];
+}
+
+- (void)removeSubmodel:(T8BaseViewModel *)model
+{
+    if (model == nil) {
+        return;
+    }
+    
+    if ([_submodels containsObject:model]) {
+        [model unbindView];
+        [_submodels removeObject:model];
+    }
+}
+
+- (void)drawInContext:(CGContextRef)context
+{
+    if (_modelFlags.skipDrawInContext || _hidden)
+        return;
+    
+    [self drawSubmodelsInContext:context];
+}
+
+- (void)drawSubmodelsInContext:(CGContextRef)context
+{
+    for (T8BaseViewModel *submodel in self.submodels)
+    {
+        CGRect frame = submodel.frame;
+        CGContextTranslateCTM(context, frame.origin.x, frame.origin.y);
+        [submodel drawInContext:context];
+        CGContextTranslateCTM(context, -frame.origin.x, -frame.origin.y);
+    }
+}
+
+- (void)layoutForContainerSize:(CGSize) __unused containerSize
+{
+    
+}
+
+#pragma mark - setter
+- (void)setFrame:(CGRect)frame
+{
+    _frame = frame;
+    
+    if (_view != nil)
+        [_view setFrame:_frame];
+}
+
+- (void)setAlpha:(CGFloat)alpha
+{
+    _alpha = alpha;
+    
+    if (_view != nil)
+        [_view setAlpha:alpha];
+}
+
+- (void)setHidden:(BOOL)hidden
+{
+    _hidden = hidden;
+    
+    if (_view != nil)
+        [_view setHidden:hidden];
 }
 
 #pragma mark - getter
