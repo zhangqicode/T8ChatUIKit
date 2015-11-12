@@ -47,7 +47,7 @@
 {
     [super bindViewToContainer:container];
     
-    [_avatarModel setAvatarUrl:_message.avatar name:_message.name];
+    [_avatarModel setAvatarUrl:nil name:nil];
 }
 
 @end

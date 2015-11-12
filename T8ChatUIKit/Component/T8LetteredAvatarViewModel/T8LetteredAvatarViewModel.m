@@ -24,10 +24,10 @@ static UIImage *defaultAvatar = nil;
             
             //!placeholder
             CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
-            CGContextFillEllipseInRect(context, CGRectMake(0.0f, 0.0f, 40.0f, 40.0f));
+            CGContextFillRect(context, CGRectMake(0.0f, 0.0f, 40.0f, 40.0f));
             CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:217/255.0 green:217/255.0 blue:217/255.0 alpha:1].CGColor);
             CGContextSetLineWidth(context, 1.0f);
-            CGContextStrokeEllipseInRect(context, CGRectMake(0.5f, 0.5f, 39.0f, 39.0f));
+            CGContextStrokeRect(context, CGRectMake(0.5f, 0.5f, 39.0f, 39.0f));
             
             defaultAvatar = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
