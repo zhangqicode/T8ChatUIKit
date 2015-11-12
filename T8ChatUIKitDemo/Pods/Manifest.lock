@@ -1,5 +1,8 @@
 PODS:
   - Masonry (0.6.3)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
   - T8TableViewForm (0.0.1):
     - Masonry (~> 0.6.1)
     - T8TableViewForm/Cells (= 0.0.1)
@@ -13,6 +16,7 @@ PODS:
     - Masonry (~> 0.6.1)
 
 DEPENDENCIES:
+  - SDWebImage (~> 3.7)
   - T8TableViewForm (from `https://github.com/zhangqippp/T8TableViewForm.git`)
 
 EXTERNAL SOURCES:
@@ -26,6 +30,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   T8TableViewForm: 4837c838bf37717d7a77207e95ac04235df7c828
 
 COCOAPODS: 0.38.2

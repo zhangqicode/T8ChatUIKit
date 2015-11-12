@@ -17,6 +17,7 @@
 		6DB9EEB21B18124700355150 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DB9EEB11B18124700355150 /* Images.xcassets */; };
 		6DB9EEB51B18124700355150 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB9EEB31B18124700355150 /* LaunchScreen.xib */; };
 		6DB9EEC11B18124700355150 /* T8ChatUIKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEC01B18124700355150 /* T8ChatUIKitDemoTests.m */; };
+		6DD2CD341BF4809B0034E6FC /* T8LetteredAvatarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD2CD331BF4809B0034E6FC /* T8LetteredAvatarViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		6DDC0CF51BEAF8AA009488B2 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDC0CF41BEAF8AA009488B2 /* Reveal.framework */; settings = {ASSET_TAGS = (); }; };
 		6DDC0CF91BEB51CF009488B2 /* T8ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC0CF81BEB51CF009488B2 /* T8ChatViewController.m */; settings = {ASSET_TAGS = (); }; };
 		6DDC0CFC1BEB535E009488B2 /* T8ChatCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC0CFB1BEB535E009488B2 /* T8ChatCollectionView.m */; settings = {ASSET_TAGS = (); }; };
@@ -61,6 +62,8 @@
 		6DB9EEBA1B18124700355150 /* T8ChatUIKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = T8ChatUIKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB9EEBF1B18124700355150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DB9EEC01B18124700355150 /* T8ChatUIKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = T8ChatUIKitDemoTests.m; sourceTree = "<group>"; };
+		6DD2CD321BF4809B0034E6FC /* T8LetteredAvatarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8LetteredAvatarViewModel.h; sourceTree = "<group>"; };
+		6DD2CD331BF4809B0034E6FC /* T8LetteredAvatarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8LetteredAvatarViewModel.m; sourceTree = "<group>"; };
 		6DDC0CF41BEAF8AA009488B2 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		6DDC0CF71BEB51CF009488B2 /* T8ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8ChatViewController.h; sourceTree = "<group>"; };
 		6DDC0CF81BEB51CF009488B2 /* T8ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8ChatViewController.m; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 		6D5DD7DE1BF0812F0016F2A7 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				6DD2CD311BF4807B0034E6FC /* T8LetteredAvatarViewModel */,
 				6D5DD7DF1BF0812F0016F2A7 /* T8LabelViewModel */,
 				6D5DD7E01BF0812F0016F2A7 /* T8TextViewModel */,
 			);
@@ -197,6 +201,15 @@
 				6DB9EEBF1B18124700355150 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DD2CD311BF4807B0034E6FC /* T8LetteredAvatarViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6DD2CD321BF4809B0034E6FC /* T8LetteredAvatarViewModel.h */,
+				6DD2CD331BF4809B0034E6FC /* T8LetteredAvatarViewModel.m */,
+			);
+			path = T8LetteredAvatarViewModel;
 			sourceTree = "<group>";
 		};
 		6DDC0CF61BEB5175009488B2 /* T8ChatUIKit */ = {
@@ -374,6 +387,7 @@
 				6DB9EEAD1B18124700355150 /* ViewController.m in Sources */,
 				6DDC0D021BEB5EAA009488B2 /* T8ChatBaseCollectionViewCell.m in Sources */,
 				6DB9EEAA1B18124700355150 /* AppDelegate.m in Sources */,
+				6DD2CD341BF4809B0034E6FC /* T8LetteredAvatarViewModel.m in Sources */,
 				6D5DD7E31BF089350016F2A7 /* T8LabelViewModel.m in Sources */,
 				6DDC0CFC1BEB535E009488B2 /* T8ChatCollectionView.m in Sources */,
 				6D5DD7DD1BF07E240016F2A7 /* T8TextMessageViewModel.m in Sources */,

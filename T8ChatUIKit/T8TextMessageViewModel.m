@@ -34,11 +34,11 @@
 
 - (void)layoutForContainerSize:(CGSize)containerSize
 {
-    [super layoutForContainerSize:containerSize];
-    
     self.frame = CGRectMake(0, 0, containerSize.width, 50);
     
-    _labelModel.frame = CGRectMake(0, 0, containerSize.width, 40);
+    _labelModel.frame = CGRectMake(0, 0, containerSize.width, 50);
+    
+    [super layoutForContainerSize:containerSize];
 }
 
 - (void)bindViewToContainer:(UIView *)container
@@ -79,12 +79,13 @@
 + (CGContextRef)_createContentContext:(CGSize)size
 {
     CGSize contextSize = size;
-    CGFloat scaling = 2.0f;
+    CGFloat scaling = [UIScreen mainScreen].scale;
     
     contextSize.width *= scaling;
     contextSize.height *= scaling;
     
     size_t bytesPerRow = 4 * (int)contextSize.width;
+    //作用是向上取整为16的倍数
     bytesPerRow = (bytesPerRow + 15) & ~15;
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
