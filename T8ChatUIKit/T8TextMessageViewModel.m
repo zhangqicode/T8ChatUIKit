@@ -34,11 +34,18 @@
 
 - (void)layoutForContainerSize:(CGSize)containerSize
 {
-    self.frame = CGRectMake(0, 0, containerSize.width, 50);
+    CGSize contentContainerSize = CGSizeMake(containerSize.width - 120.0f, containerSize.height);
+    CGSize contentSize = [self contentSizeForContainerSize:contentContainerSize];
+    self.frame = CGRectMake(0, 0, containerSize.width, MAX(60, contentSize.height + 20));
     
     _labelModel.frame = CGRectMake(0, 0, containerSize.width, 50);
     
     [super layoutForContainerSize:containerSize];
+}
+
+- (CGSize)contentSizeForContainerSize:(CGSize)containerSize
+{
+    return CGSizeMake(containerSize.width, 100);
 }
 
 - (void)bindViewToContainer:(UIView *)container

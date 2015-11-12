@@ -7,7 +7,7 @@
 //
 
 #import "T8LetteredAvatarViewModel.h"
-#import "UIImageView+WebCache.h"
+#import "T8LetteredAvatarView.h"
 
 static UIImage *defaultAvatar = nil;
 
@@ -38,15 +38,13 @@ static UIImage *defaultAvatar = nil;
 
 - (Class)viewClass
 {
-    return [UIImageView class];
+    return [T8LetteredAvatarView class];
 }
 
 - (void)setAvatarUrl:(NSString *)avatar name:(NSString *)name
 {
-    if (avatar.length > 0) {
-        [((UIImageView *)self.boundView) sd_setImageWithURL:[NSURL URLWithString:avatar] placeholderImage:defaultAvatar];
-    }else if (name.length > 0){
-        
+    if (avatar.length > 0 || name.length > 0) {
+        [((T8LetteredAvatarView *)self.boundView) setAvatar:avatar Name:name];
     }else{
         ((UIImageView *)self.boundView).image = defaultAvatar;
     }
@@ -55,6 +53,8 @@ static UIImage *defaultAvatar = nil;
 - (void)bindViewToContainer:(UIView *)container
 {
     [super bindViewToContainer:container];
+    
+    ((UIImageView *)self.boundView).image = defaultAvatar;
 }
 
 - (void)unbindView

@@ -12,7 +12,6 @@
 @interface T8MessageViewModel ()
 {
     T8LetteredAvatarViewModel *_avatarModel;
-    T8MessageModel *_message;
 }
 
 @end
@@ -40,14 +39,19 @@
 
 - (void)layoutForContainerSize:(CGSize)containerSize
 {
-    _avatarModel.frame = CGRectMake(0, 0, 40, 40);
+    _avatarModel.frame = CGRectMake(10, 10, 40, 40);
 }
 
 - (void)bindViewToContainer:(UIView *)container
 {
     [super bindViewToContainer:container];
     
-    [_avatarModel setAvatarUrl:nil name:nil];
+    [_avatarModel setAvatarUrl:_message.avatar name:_message.name];
+}
+
+- (CGSize)contentSizeForContainerSize:(CGSize)containerSize
+{
+    return CGSizeZero;
 }
 
 @end

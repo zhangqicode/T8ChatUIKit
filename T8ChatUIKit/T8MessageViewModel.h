@@ -10,7 +10,12 @@
 #import "T8MessageModel.h"
 
 @interface T8MessageViewModel : T8BaseViewModel
+{
+    T8MessageModel *_message;
+}
 
 - (instancetype)initWithMessage:(T8MessageModel *)message;
+
+- (CGSize)contentSizeForContainerSize:(CGSize)containerSize;
 
 @end
