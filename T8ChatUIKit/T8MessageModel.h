@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSString *avatar;
 @property (strong, nonatomic) NSString *content;
 @property (nonatomic) NSInteger type;
+@property (nonatomic) BOOL incoming;
 
 - (CGSize)sizeForContainerSize:(CGSize)containerSize;
 

@@ -26,7 +26,7 @@
         
         _labelModel = [[T8LabelViewModel alloc] initWithText:message.content textColor:[UIColor blackColor] font:CTFontCreateWithName(CFSTR("HelveticaNeue"), floorf(14 * 2.0f) / 2.0f, NULL) maxWidth:200];
         
-        [self addSubmodel:_labelModel];
+//        [self addSubmodel:_labelModel];
         
     }
     return self;
@@ -36,7 +36,7 @@
 {
     CGSize contentContainerSize = CGSizeMake(containerSize.width - 120.0f, containerSize.height);
     CGSize contentSize = [self contentSizeForContainerSize:contentContainerSize];
-    self.frame = CGRectMake(0, 0, containerSize.width, MAX(60, contentSize.height + 20));
+    self.frame = CGRectMake(0, 0, containerSize.width, MAX(60, contentSize.height + 10));
     
     _labelModel.frame = CGRectMake(0, 0, containerSize.width, 50);
     
@@ -45,6 +45,19 @@
 
 - (CGSize)contentSizeForContainerSize:(CGSize)containerSize
 {
+    NSInteger i = 2;
+    switch (i) {
+        case 0:
+            return CGSizeMake(30, 20);
+            break;
+        case 1:
+            return CGSizeMake(containerSize.width, 20);
+            break;
+        case 2:
+            return CGSizeMake(containerSize.width, 80);
+        default:
+            break;
+    }
     return CGSizeMake(containerSize.width, 100);
 }
 

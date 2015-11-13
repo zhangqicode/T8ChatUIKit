@@ -17,6 +17,8 @@
     __weak T8ChatBaseCollectionViewCell *_cell;
 }
 
+@property (strong, nonatomic) UIView *test;
+
 @end
 
 @implementation T8MessageItem
@@ -70,6 +72,8 @@
 
 - (void)unbindCell
 {
+    [_viewModel unbindView];
+    
     if (_cell.boundItem == self) {
         _cell.boundItem = nil;
     }

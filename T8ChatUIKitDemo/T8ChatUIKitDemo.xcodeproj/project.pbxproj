@@ -19,6 +19,12 @@
 		6DB9EEC11B18124700355150 /* T8ChatUIKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEC01B18124700355150 /* T8ChatUIKitDemoTests.m */; };
 		6DD2CD341BF4809B0034E6FC /* T8LetteredAvatarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD2CD331BF4809B0034E6FC /* T8LetteredAvatarViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		6DD2CD371BF4C2370034E6FC /* T8LetteredAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD2CD361BF4C2370034E6FC /* T8LetteredAvatarView.m */; settings = {ASSET_TAGS = (); }; };
+		6DD2CD3B1BF4CC9D0034E6FC /* T8ImageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD2CD3A1BF4CC9D0034E6FC /* T8ImageViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		6DD2CD3F1BF584390034E6FC /* T8BubbleBgViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD2CD3E1BF584390034E6FC /* T8BubbleBgViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		6DD2CD501BF5C80B0034E6FC /* T8Chat_text_reciever_bubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD2CD4C1BF5C80B0034E6FC /* T8Chat_text_reciever_bubble@2x.png */; settings = {ASSET_TAGS = (); }; };
+		6DD2CD511BF5C80B0034E6FC /* T8Chat_text_reciever_bubble@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD2CD4D1BF5C80B0034E6FC /* T8Chat_text_reciever_bubble@3x.png */; settings = {ASSET_TAGS = (); }; };
+		6DD2CD521BF5C80B0034E6FC /* T8Chat_text_sender_bubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD2CD4E1BF5C80B0034E6FC /* T8Chat_text_sender_bubble@2x.png */; settings = {ASSET_TAGS = (); }; };
+		6DD2CD531BF5C80B0034E6FC /* T8Chat_text_sender_bubble@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD2CD4F1BF5C80B0034E6FC /* T8Chat_text_sender_bubble@3x.png */; settings = {ASSET_TAGS = (); }; };
 		6DDC0CF51BEAF8AA009488B2 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDC0CF41BEAF8AA009488B2 /* Reveal.framework */; settings = {ASSET_TAGS = (); }; };
 		6DDC0CF91BEB51CF009488B2 /* T8ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC0CF81BEB51CF009488B2 /* T8ChatViewController.m */; settings = {ASSET_TAGS = (); }; };
 		6DDC0CFC1BEB535E009488B2 /* T8ChatCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC0CFB1BEB535E009488B2 /* T8ChatCollectionView.m */; settings = {ASSET_TAGS = (); }; };
@@ -67,6 +73,14 @@
 		6DD2CD331BF4809B0034E6FC /* T8LetteredAvatarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8LetteredAvatarViewModel.m; sourceTree = "<group>"; };
 		6DD2CD351BF4C2370034E6FC /* T8LetteredAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8LetteredAvatarView.h; sourceTree = "<group>"; };
 		6DD2CD361BF4C2370034E6FC /* T8LetteredAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8LetteredAvatarView.m; sourceTree = "<group>"; };
+		6DD2CD391BF4CC9D0034E6FC /* T8ImageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8ImageViewModel.h; sourceTree = "<group>"; };
+		6DD2CD3A1BF4CC9D0034E6FC /* T8ImageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8ImageViewModel.m; sourceTree = "<group>"; };
+		6DD2CD3D1BF584390034E6FC /* T8BubbleBgViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8BubbleBgViewModel.h; sourceTree = "<group>"; };
+		6DD2CD3E1BF584390034E6FC /* T8BubbleBgViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8BubbleBgViewModel.m; sourceTree = "<group>"; };
+		6DD2CD4C1BF5C80B0034E6FC /* T8Chat_text_reciever_bubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T8Chat_text_reciever_bubble@2x.png"; sourceTree = "<group>"; };
+		6DD2CD4D1BF5C80B0034E6FC /* T8Chat_text_reciever_bubble@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T8Chat_text_reciever_bubble@3x.png"; sourceTree = "<group>"; };
+		6DD2CD4E1BF5C80B0034E6FC /* T8Chat_text_sender_bubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T8Chat_text_sender_bubble@2x.png"; sourceTree = "<group>"; };
+		6DD2CD4F1BF5C80B0034E6FC /* T8Chat_text_sender_bubble@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "T8Chat_text_sender_bubble@3x.png"; sourceTree = "<group>"; };
 		6DDC0CF41BEAF8AA009488B2 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		6DDC0CF71BEB51CF009488B2 /* T8ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8ChatViewController.h; sourceTree = "<group>"; };
 		6DDC0CF81BEB51CF009488B2 /* T8ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8ChatViewController.m; sourceTree = "<group>"; };
@@ -118,6 +132,8 @@
 		6D5DD7DE1BF0812F0016F2A7 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				6DD2CD3C1BF5841F0034E6FC /* T8BubbleBgViewModel */,
+				6DD2CD381BF4CB810034E6FC /* T8ImageViewModel */,
 				6DD2CD311BF4807B0034E6FC /* T8LetteredAvatarViewModel */,
 				6D5DD7DF1BF0812F0016F2A7 /* T8LabelViewModel */,
 				6D5DD7E01BF0812F0016F2A7 /* T8TextViewModel */,
@@ -217,6 +233,35 @@
 			path = T8LetteredAvatarViewModel;
 			sourceTree = "<group>";
 		};
+		6DD2CD381BF4CB810034E6FC /* T8ImageViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6DD2CD391BF4CC9D0034E6FC /* T8ImageViewModel.h */,
+				6DD2CD3A1BF4CC9D0034E6FC /* T8ImageViewModel.m */,
+			);
+			path = T8ImageViewModel;
+			sourceTree = "<group>";
+		};
+		6DD2CD3C1BF5841F0034E6FC /* T8BubbleBgViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6DD2CD3D1BF584390034E6FC /* T8BubbleBgViewModel.h */,
+				6DD2CD3E1BF584390034E6FC /* T8BubbleBgViewModel.m */,
+			);
+			path = T8BubbleBgViewModel;
+			sourceTree = "<group>";
+		};
+		6DD2CD471BF59E770034E6FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6DD2CD4C1BF5C80B0034E6FC /* T8Chat_text_reciever_bubble@2x.png */,
+				6DD2CD4D1BF5C80B0034E6FC /* T8Chat_text_reciever_bubble@3x.png */,
+				6DD2CD4E1BF5C80B0034E6FC /* T8Chat_text_sender_bubble@2x.png */,
+				6DD2CD4F1BF5C80B0034E6FC /* T8Chat_text_sender_bubble@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		6DDC0CF61BEB5175009488B2 /* T8ChatUIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +283,7 @@
 				6DDC0D0D1BF05459009488B2 /* T8MessageViewModel.m */,
 				6D5DD7DB1BF07E240016F2A7 /* T8TextMessageViewModel.h */,
 				6D5DD7DC1BF07E240016F2A7 /* T8TextMessageViewModel.m */,
+				6DD2CD471BF59E770034E6FC /* Resources */,
 				6D5DD7DE1BF0812F0016F2A7 /* Component */,
 			);
 			name = T8ChatUIKit;
@@ -335,8 +381,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DD2CD531BF5C80B0034E6FC /* T8Chat_text_sender_bubble@3x.png in Resources */,
 				6DB9EEB01B18124700355150 /* Main.storyboard in Resources */,
 				6DB9EEB51B18124700355150 /* LaunchScreen.xib in Resources */,
+				6DD2CD511BF5C80B0034E6FC /* T8Chat_text_reciever_bubble@3x.png in Resources */,
+				6DD2CD501BF5C80B0034E6FC /* T8Chat_text_reciever_bubble@2x.png in Resources */,
+				6DD2CD521BF5C80B0034E6FC /* T8Chat_text_sender_bubble@2x.png in Resources */,
 				6DB9EEB21B18124700355150 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,7 +451,9 @@
 				6DDC0D0E1BF05459009488B2 /* T8MessageViewModel.m in Sources */,
 				6DDC0D0B1BF05256009488B2 /* T8MessageItem.m in Sources */,
 				6DDC0D051BEC7CAD009488B2 /* T8MessageModel.m in Sources */,
+				6DD2CD3B1BF4CC9D0034E6FC /* T8ImageViewModel.m in Sources */,
 				6DDC0CFF1BEB5383009488B2 /* T8ChatCollectionViewLayout.m in Sources */,
+				6DD2CD3F1BF584390034E6FC /* T8BubbleBgViewModel.m in Sources */,
 				6DB9EEA71B18124700355150 /* main.m in Sources */,
 				6D5DD7E61BF0A4C60016F2A7 /* T8TextViewModel.m in Sources */,
 			);

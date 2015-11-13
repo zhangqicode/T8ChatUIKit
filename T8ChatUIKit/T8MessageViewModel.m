@@ -8,10 +8,12 @@
 
 #import "T8MessageViewModel.h"
 #import "T8LetteredAvatarViewModel.h"
+#import "T8BubbleBgViewModel.h"
 
 @interface T8MessageViewModel ()
 {
     T8LetteredAvatarViewModel *_avatarModel;
+    T8BubbleBgViewModel *_bubbleBgModel;
 }
 
 @end
@@ -26,7 +28,9 @@
         _message = message;
         
         _avatarModel = [[T8LetteredAvatarViewModel alloc] init];
+        _bubbleBgModel = [[T8BubbleBgViewModel alloc] initWithType:_message.incoming?T8BubbleBgTypeIncoming:T8BubbleBgTypeOutgoing];
         [self addSubmodel:_avatarModel];
+        [self addSubmodel:_bubbleBgModel];
         
     }
     return self;
@@ -39,7 +43,21 @@
 
 - (void)layoutForContainerSize:(CGSize)containerSize
 {
-    _avatarModel.frame = CGRectMake(10, 10, 40, 40);
+    if (_message.incoming) {
+        _avatarModel.frame = CGRectMake(10, 10, 40, 40);
+    }else{
+        _avatarModel.frame = CGRectMake(containerSize.width - 10 - 40, 10, 40, 40);
+    }
+    
+    CGSize contentContainerSize = CGSizeMake(containerSize.width - 120.0f, containerSize.height);
+    CGSize contentSize = [self contentSizeForContainerSize:contentContainerSize];
+    contentSize.width = MAX(contentSize.width, 60);
+    contentSize.height = MAX(contentSize.height, 54);
+    if (_message.incoming) {
+        _bubbleBgModel.frame = CGRectMake(60, 7.5, contentSize.width, contentSize.height);
+    }else{
+        _bubbleBgModel.frame = CGRectMake(containerSize.width - contentSize.width - 60, 7.5, contentSize.width, contentSize.height);
+    }
 }
 
 - (void)bindViewToContainer:(UIView *)container
