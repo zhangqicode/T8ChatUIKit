@@ -55,6 +55,9 @@ T8TextMessageBackgroundImageDef(outgoingImage, false, @"T8Chat_text_sender_bubbl
     }else{
         boundView.image = nil;
     }
+    
+    self.image = boundView.image;
+    boundView.image = nil;
 }
 
 @end

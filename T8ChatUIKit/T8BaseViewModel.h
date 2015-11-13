@@ -51,4 +51,6 @@
 - (void)drawInContext:(CGContextRef)context;
 - (void)drawSubmodelsInContext:(CGContextRef)context;
 
+- (CGRect)bounds;
+
 @end

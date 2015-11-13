@@ -158,6 +158,11 @@
     
 }
 
+- (CGRect)bounds
+{
+    return CGRectMake(0, 0, _frame.size.width, _frame.size.height);
+}
+
 #pragma mark - setter
 - (void)setFrame:(CGRect)frame
 {

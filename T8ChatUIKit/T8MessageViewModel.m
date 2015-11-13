@@ -49,9 +49,9 @@
         _avatarModel.frame = CGRectMake(containerSize.width - 10 - 40, 10, 40, 40);
     }
     
-    CGSize contentContainerSize = CGSizeMake(containerSize.width - 120.0f, containerSize.height);
+    CGSize contentContainerSize = CGSizeMake(containerSize.width - 150.0f, containerSize.height);
     CGSize contentSize = [self contentSizeForContainerSize:contentContainerSize];
-    contentSize.width = MAX(contentSize.width, 60);
+    contentSize.width = MAX(contentSize.width, 60) + 30;
     contentSize.height = MAX(contentSize.height, 54);
     if (_message.incoming) {
         _bubbleBgModel.frame = CGRectMake(60, 7.5, contentSize.width, contentSize.height);

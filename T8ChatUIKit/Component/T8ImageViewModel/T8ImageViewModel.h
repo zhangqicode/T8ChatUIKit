@@ -10,4 +10,7 @@
 
 @interface T8ImageViewModel : T8BaseViewModel
 
+@property (nonatomic, strong) UIImage *image;
+@property (nonatomic) CGBlendMode blendMode;
+
 @end

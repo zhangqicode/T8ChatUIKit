@@ -12,7 +12,7 @@
 
 @interface T8TextMessageViewModel ()
 {
-    T8LabelViewModel *_labelModel;
+    T8LabelViewModel *_textModel;
 }
 
 @end
@@ -24,9 +24,9 @@
     self = [super initWithMessage:message];
     if (self) {
         
-        _labelModel = [[T8LabelViewModel alloc] initWithText:message.content textColor:[UIColor blackColor] font:CTFontCreateWithName(CFSTR("HelveticaNeue"), floorf(14 * 2.0f) / 2.0f, NULL) maxWidth:200];
+        _textModel = [[T8LabelViewModel alloc] initWithText:message.content textColor:[UIColor blackColor] font:CTFontCreateWithName(CFSTR("HelveticaNeue"), floorf(14 * 2.0f) / 2.0f, NULL) maxWidth:0];
         
-//        [self addSubmodel:_labelModel];
+        [self addSubmodel:_textModel];
         
     }
     return self;
@@ -34,31 +34,23 @@
 
 - (void)layoutForContainerSize:(CGSize)containerSize
 {
-    CGSize contentContainerSize = CGSizeMake(containerSize.width - 120.0f, containerSize.height);
+    CGSize contentContainerSize = CGSizeMake(containerSize.width - 150.0f, containerSize.height);
     CGSize contentSize = [self contentSizeForContainerSize:contentContainerSize];
     self.frame = CGRectMake(0, 0, containerSize.width, MAX(60, contentSize.height + 10));
     
-    _labelModel.frame = CGRectMake(0, 0, containerSize.width, 50);
+    if (_message.incoming) {
+        _textModel.frame = CGRectMake(75, 18, contentSize.width, contentSize.height);
+    }else{
+        _textModel.frame = CGRectMake(containerSize.width - 75 - contentSize.width, 18, contentSize.width, contentSize.height);
+    }
     
     [super layoutForContainerSize:containerSize];
 }
 
 - (CGSize)contentSizeForContainerSize:(CGSize)containerSize
 {
-    NSInteger i = 2;
-    switch (i) {
-        case 0:
-            return CGSizeMake(30, 20);
-            break;
-        case 1:
-            return CGSizeMake(containerSize.width, 20);
-            break;
-        case 2:
-            return CGSizeMake(containerSize.width, 80);
-        default:
-            break;
-    }
-    return CGSizeMake(containerSize.width, 100);
+    [_textModel setMaxWidth:containerSize.width];
+    return _textModel.frame.size;
 }
 
 - (void)bindViewToContainer:(UIView *)container
