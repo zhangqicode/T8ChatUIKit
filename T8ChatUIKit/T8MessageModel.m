@@ -19,7 +19,7 @@
         self.avatar = @"http://7xnjim.com1.z0.glb.clouddn.com/avatar/4cb918db-411f-44e8-b0ca-5e0851ff4f8c";
         self.type = 1;
         self.content = @"why are you so diao?";
-        self.incoming = YES;
+        self.incoming = rand()%2;
         
     }
     return self;

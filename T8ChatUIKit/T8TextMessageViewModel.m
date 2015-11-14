@@ -8,7 +8,6 @@
 
 #import "T8TextMessageViewModel.h"
 #import "T8TextViewModel.h"
-#import "T8LabelViewModel.h"
 
 @interface T8TextMessageViewModel ()
 {
@@ -24,8 +23,8 @@
     self = [super initWithMessage:message];
     if (self) {
         
-//        _textModel = [[T8LabelViewModel alloc] initWithText:message.content textColor:[UIColor blackColor] font:CTFontCreateWithName(CFSTR("HelveticaNeue"), floorf(14 * 2.0f) / 2.0f, NULL) maxWidth:0];
         _textModel = [[T8TextViewModel alloc] initWithText:message.content font:[UIFont systemFontOfSize:14]];
+        _textModel.textColor = [UIColor blackColor];
         
         [self addSubmodel:_textModel];
         
@@ -59,59 +58,58 @@
 {
     [super bindViewToContainer:container];
     
-//    [self _updateSubmodelContentsForLayer:container.layer visibleRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 }
 
-- (void)_updateSubmodelContentsForLayer:(CALayer *)layer visibleRect:(CGRect)visibleRect
-{
-    CGRect clipRect = CGRectIntersection(visibleRect, CGRectMake(0.0f, 0.0f, self.frame.size.width, self.frame.size.height));
-    if (clipRect.size.height < FLT_EPSILON)
-        return;
-    
-    CGSize contextSize = clipRect.size;
-    CGContextRef context = [T8TextMessageViewModel _createContentContext:contextSize];
-    UIGraphicsPushContext(context);
-    
-    CGContextTranslateCTM(context, contextSize.width / 2.0f, contextSize.height / 2.0f);
-    CGContextScaleCTM(context, 1.0f, -1.0f);
-    CGContextTranslateCTM(context, -contextSize.width / 2.0f, -contextSize.height / 2.0f);
-    
-    if (visibleRect.origin.y > FLT_EPSILON)
-        CGContextTranslateCTM(context, 0.0f, -visibleRect.origin.y);
-    
-    [self drawSubmodelsInContext:context];
-    
-    UIGraphicsPopContext();
-    
-    CGImageRef contextImageRef = CGBitmapContextCreateImage(context);
-    CGContextRelease(context);
-    
-    layer.contents = (__bridge id)(contextImageRef);
-    CGImageRelease(contextImageRef);
-}
-
-+ (CGContextRef)_createContentContext:(CGSize)size
-{
-    CGSize contextSize = size;
-    CGFloat scaling = [UIScreen mainScreen].scale;
-    
-    contextSize.width *= scaling;
-    contextSize.height *= scaling;
-    
-    size_t bytesPerRow = 4 * (int)contextSize.width;
-    //作用是向上取整为16的倍数
-    bytesPerRow = (bytesPerRow + 15) & ~15;
-    
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    
-    CGBitmapInfo bitmapInfo = kCGImageAlphaPremultipliedFirst | kCGBitmapByteOrder32Host;
-    
-    CGContextRef context = CGBitmapContextCreate(NULL, (int)contextSize.width, (int)contextSize.height, 8, bytesPerRow, colorSpace, bitmapInfo);
-    CGColorSpaceRelease(colorSpace);
-    
-    CGContextScaleCTM(context, scaling, scaling);
-    
-    return context;
-}
+//- (void)_updateSubmodelContentsForLayer:(CALayer *)layer visibleRect:(CGRect)visibleRect
+//{
+//    CGRect clipRect = CGRectIntersection(visibleRect, CGRectMake(0.0f, 0.0f, self.frame.size.width, self.frame.size.height));
+//    if (clipRect.size.height < FLT_EPSILON)
+//        return;
+//    
+//    CGSize contextSize = clipRect.size;
+//    CGContextRef context = [T8TextMessageViewModel _createContentContext:contextSize];
+//    UIGraphicsPushContext(context);
+//    
+//    CGContextTranslateCTM(context, contextSize.width / 2.0f, contextSize.height / 2.0f);
+//    CGContextScaleCTM(context, 1.0f, -1.0f);
+//    CGContextTranslateCTM(context, -contextSize.width / 2.0f, -contextSize.height / 2.0f);
+//    
+//    if (visibleRect.origin.y > FLT_EPSILON)
+//        CGContextTranslateCTM(context, 0.0f, -visibleRect.origin.y);
+//    
+//    [self drawSubmodelsInContext:context];
+//    
+//    UIGraphicsPopContext();
+//    
+//    CGImageRef contextImageRef = CGBitmapContextCreateImage(context);
+//    CGContextRelease(context);
+//    
+//    layer.contents = (__bridge id)(contextImageRef);
+//    CGImageRelease(contextImageRef);
+//}
+//
+//+ (CGContextRef)_createContentContext:(CGSize)size
+//{
+//    CGSize contextSize = size;
+//    CGFloat scaling = [UIScreen mainScreen].scale;
+//    
+//    contextSize.width *= scaling;
+//    contextSize.height *= scaling;
+//    
+//    size_t bytesPerRow = 4 * (int)contextSize.width;
+//    //作用是向上取整为16的倍数
+//    bytesPerRow = (bytesPerRow + 15) & ~15;
+//    
+//    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+//    
+//    CGBitmapInfo bitmapInfo = kCGImageAlphaPremultipliedFirst | kCGBitmapByteOrder32Host;
+//    
+//    CGContextRef context = CGBitmapContextCreate(NULL, (int)contextSize.width, (int)contextSize.height, 8, bytesPerRow, colorSpace, bitmapInfo);
+//    CGColorSpaceRelease(colorSpace);
+//    
+//    CGContextScaleCTM(context, scaling, scaling);
+//    
+//    return context;
+//}
 
 @end

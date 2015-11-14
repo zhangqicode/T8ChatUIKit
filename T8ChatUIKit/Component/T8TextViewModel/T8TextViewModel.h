@@ -14,18 +14,9 @@
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic) UIFont *font;
 @property (nonatomic, strong) UIColor *textColor;
-@property (nonatomic) int lineCount;
-@property (nonatomic, strong) NSArray *textCheckingResults;
-@property (nonatomic) NSTextAlignment alignment;
-@property (nonatomic) int layoutFlags;
-@property (nonatomic) CGFloat additionalTrailingWidth;
-@property (nonatomic, strong) NSArray *additionalAttributes;
-@property (nonatomic, readonly) bool isRTL;
 
 - (instancetype)initWithText:(NSString *)text font:(UIFont *)font;
 
-- (bool)layoutNeedsUpdatingForContainerSize:(CGSize)containerSize;
 - (void)layoutForContainerSize:(CGSize)containerSize;
-- (NSString *)linkAtPoint:(CGPoint)point regionData:(__autoreleasing NSArray **)regionData;
 
 @end
