@@ -40,6 +40,7 @@
     CGSize contentSize = [self contentSizeForContainerSize:contentContainerSize];
     self.frame = CGRectMake(0, 0, containerSize.width, MAX(60, contentSize.height + 36));
     
+    contentSize.height = MAX(contentSize.height, 24);
     if (_message.incoming) {
         _textModel.frame = CGRectMake(75, 18, contentSize.width, contentSize.height);
     }else{

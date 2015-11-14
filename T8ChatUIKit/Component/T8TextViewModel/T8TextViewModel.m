@@ -52,7 +52,15 @@
 - (void)layoutForContainerSize:(CGSize)containerSize
 {
     CGRect rect = [_text boundingRectWithSize:containerSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : _font} context:nil];
-    self.frame = CGRectMake(0, 0, rect.size.width, rect.size.height);
+    self.frame = CGRectMake(0, 0, ceil(rect.size.width), ceil(rect.size.height));
+}
+
+- (void)bindViewToContainer:(UIView *)container
+{
+    [super bindViewToContainer:container];
+    
+    UIView *view = (UIView *)self.boundView;
+    view.backgroundColor = [UIColor greenColor];
 }
 
 //- (void)drawInContext:(CGContextRef)context

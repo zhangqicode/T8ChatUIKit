@@ -20,12 +20,4 @@
     [super bindViewToContainer:container];
 }
 
-- (void)drawInContext:(CGContextRef)context
-{
-    [super drawInContext:context];
-    
-    if (!self.skipDrawInContext && self.alpha > FLT_EPSILON)
-        [_image drawInRect:self.bounds blendMode:_blendMode alpha:1.0f];
-}
-
 @end
