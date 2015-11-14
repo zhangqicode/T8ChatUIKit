@@ -12,7 +12,7 @@
 @interface T8TextViewModel : T8BaseViewModel
 
 @property (nonatomic, strong) NSString *text;
-@property (nonatomic) CTFontRef font;
+@property (nonatomic) UIFont *font;
 @property (nonatomic, strong) UIColor *textColor;
 @property (nonatomic) int lineCount;
 @property (nonatomic, strong) NSArray *textCheckingResults;
@@ -22,7 +22,7 @@
 @property (nonatomic, strong) NSArray *additionalAttributes;
 @property (nonatomic, readonly) bool isRTL;
 
-- (instancetype)initWithText:(NSString *)text font:(CTFontRef)font;
+- (instancetype)initWithText:(NSString *)text font:(UIFont *)font;
 
 - (bool)layoutNeedsUpdatingForContainerSize:(CGSize)containerSize;
 - (void)layoutForContainerSize:(CGSize)containerSize;

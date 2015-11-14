@@ -18,7 +18,7 @@
 
 @implementation T8TextViewModel
 
-- (instancetype)initWithText:(NSString *)text font:(CTFontRef)font
+- (instancetype)initWithText:(NSString *)text font:(UIFont *)font
 {
     self = [super init];
     if (self != nil)
@@ -29,18 +29,14 @@
             _text = @" ";
         
         if (font != NULL)
-            _font = CFRetain(font);
+            _font = font;
     }
     return self;
 }
 
 - (void)dealloc
 {
-    if (_font != NULL)
-    {
-        CFRelease(_font);
-        _font = NULL;
-    }
+    
 }
 
 - (Class)viewClass
@@ -51,6 +47,12 @@
 - (void)sizeToFit
 {
     
+}
+
+- (void)layoutForContainerSize:(CGSize)containerSize
+{
+    CGRect rect = [_text boundingRectWithSize:containerSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : _font} context:nil];
+    self.frame = CGRectMake(0, 0, rect.size.width, rect.size.height);
 }
 
 //- (void)drawInContext:(CGContextRef)context

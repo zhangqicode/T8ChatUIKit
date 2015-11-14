@@ -63,11 +63,11 @@
     
     for (UICollectionViewLayoutAttributes *attributes in _layoutAttributes)
     {
-        if (!CGRectIsNull(CGRectIntersection(rect, attributes.frame)))
+        if ((CGRectIntersectsRect(rect, attributes.frame)))
             [array addObject:attributes];
     }
     
-    return array;
+    return _layoutAttributes;
 }
 
 @end

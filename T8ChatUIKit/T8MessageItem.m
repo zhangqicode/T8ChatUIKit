@@ -67,7 +67,10 @@
     _cell = cell;
     _cell.boundItem = self;
     
-    [_viewModel bindViewToContainer:[cell contentViewForBinding]];
+    UIView *contentViewForBinding = [cell contentViewForBinding];
+    contentViewForBinding.frame = cell.bounds;
+    
+    [_viewModel bindViewToContainer:contentViewForBinding];
 }
 
 - (void)unbindCell

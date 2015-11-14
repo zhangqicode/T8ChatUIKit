@@ -12,7 +12,7 @@
 
 @interface T8TextMessageViewModel ()
 {
-    T8LabelViewModel *_textModel;
+    T8TextViewModel *_textModel;
 }
 
 @end
@@ -24,7 +24,8 @@
     self = [super initWithMessage:message];
     if (self) {
         
-        _textModel = [[T8LabelViewModel alloc] initWithText:message.content textColor:[UIColor blackColor] font:CTFontCreateWithName(CFSTR("HelveticaNeue"), floorf(14 * 2.0f) / 2.0f, NULL) maxWidth:0];
+//        _textModel = [[T8LabelViewModel alloc] initWithText:message.content textColor:[UIColor blackColor] font:CTFontCreateWithName(CFSTR("HelveticaNeue"), floorf(14 * 2.0f) / 2.0f, NULL) maxWidth:0];
+        _textModel = [[T8TextViewModel alloc] initWithText:message.content font:[UIFont systemFontOfSize:14]];
         
         [self addSubmodel:_textModel];
         
@@ -35,8 +36,9 @@
 - (void)layoutForContainerSize:(CGSize)containerSize
 {
     CGSize contentContainerSize = CGSizeMake(containerSize.width - 150.0f, containerSize.height);
+    [_textModel layoutForContainerSize:contentContainerSize];
     CGSize contentSize = [self contentSizeForContainerSize:contentContainerSize];
-    self.frame = CGRectMake(0, 0, containerSize.width, MAX(60, contentSize.height + 10));
+    self.frame = CGRectMake(0, 0, containerSize.width, MAX(60, contentSize.height + 36));
     
     if (_message.incoming) {
         _textModel.frame = CGRectMake(75, 18, contentSize.width, contentSize.height);
@@ -49,7 +51,6 @@
 
 - (CGSize)contentSizeForContainerSize:(CGSize)containerSize
 {
-    [_textModel setMaxWidth:containerSize.width];
     return _textModel.frame.size;
 }
 
@@ -57,7 +58,7 @@
 {
     [super bindViewToContainer:container];
     
-    [self _updateSubmodelContentsForLayer:container.layer visibleRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+//    [self _updateSubmodelContentsForLayer:container.layer visibleRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 }
 
 - (void)_updateSubmodelContentsForLayer:(CALayer *)layer visibleRect:(CGRect)visibleRect

@@ -19,10 +19,7 @@
         self.avatar = @"http://7xnjim.com1.z0.glb.clouddn.com/avatar/4cb918db-411f-44e8-b0ca-5e0851ff4f8c";
         self.type = 1;
         self.content = @"why are you so diao?";
-        for (int i = 0; i <= rand()%10; i++) {
-            self.content = [self.content stringByAppendingString:@"why are you so diao?"];
-        }
-        self.incoming = rand()%2;
+        self.incoming = YES;
         
     }
     return self;

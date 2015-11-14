@@ -34,6 +34,9 @@
         _items = [NSMutableArray array];
         for (int i = 0; i < 50; i++) {
             T8MessageModel *model = [[T8MessageModel alloc] init];
+            if (i%2 == 0) {
+                model.content = @"tuiaoweufaywgrawheiofjawirghawiufhawiuehfiauwhgauiwfheauyrgawiufhiuwahefauwhrguyawgefuyawgrhuahwufygwaruyfhawiuefhaiuwehfaiuwhguwayegfuyawgruyahfwiuehaiuwrhfauwehawuyefgauywrgauwfhauwirhgiuahfiuwehiuahgiugwauyagfuawhgiuawhfiu";
+            }
             T8MessageItem *item = [[T8MessageItem alloc] initWithMessage:model];
             [_items addObject:item];
         }
@@ -104,7 +107,7 @@
         }
         [item bindCell:cell];
     }];
-    
+
     
     
     return cell;

@@ -14,7 +14,7 @@
 
 @end
 
-@interface T8ChatCollectionViewLayout : UICollectionViewLayout
+@interface T8ChatCollectionViewLayout : UICollectionViewFlowLayout
 
 
 
