@@ -12,6 +12,8 @@
 		6D5DD7E61BF0A4C60016F2A7 /* T8TextViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5DD7E51BF0A4C60016F2A7 /* T8TextViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		6D6A83601BF735A700E823AA /* T8BubbleMessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6A835F1BF735A700E823AA /* T8BubbleMessageViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		6D6A83631BF7394800E823AA /* T8PhotoMessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6A83621BF7394800E823AA /* T8PhotoMessageViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		6D6A836A1BF9D5E400E823AA /* T8BubbledImageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6A83691BF9D5E400E823AA /* T8BubbledImageViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		6D6A836D1BF9D5F900E823AA /* T8BubbledImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6A836C1BF9D5F900E823AA /* T8BubbledImageView.m */; settings = {ASSET_TAGS = (); }; };
 		6DB9EEA71B18124700355150 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEA61B18124700355150 /* main.m */; };
 		6DB9EEAA1B18124700355150 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEA91B18124700355150 /* AppDelegate.m */; };
 		6DB9EEAD1B18124700355150 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEAC1B18124700355150 /* ViewController.m */; };
@@ -62,6 +64,10 @@
 		6D6A835F1BF735A700E823AA /* T8BubbleMessageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8BubbleMessageViewModel.m; sourceTree = "<group>"; };
 		6D6A83611BF7394800E823AA /* T8PhotoMessageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8PhotoMessageViewModel.h; sourceTree = "<group>"; };
 		6D6A83621BF7394800E823AA /* T8PhotoMessageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8PhotoMessageViewModel.m; sourceTree = "<group>"; };
+		6D6A83681BF9D5E400E823AA /* T8BubbledImageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8BubbledImageViewModel.h; sourceTree = "<group>"; };
+		6D6A83691BF9D5E400E823AA /* T8BubbledImageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8BubbledImageViewModel.m; sourceTree = "<group>"; };
+		6D6A836B1BF9D5F900E823AA /* T8BubbledImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8BubbledImageView.h; sourceTree = "<group>"; };
+		6D6A836C1BF9D5F900E823AA /* T8BubbledImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8BubbledImageView.m; sourceTree = "<group>"; };
 		6DB9EEA11B18124700355150 /* T8ChatUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T8ChatUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB9EEA51B18124700355150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DB9EEA61B18124700355150 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -244,6 +250,10 @@
 			children = (
 				6DD2CD391BF4CC9D0034E6FC /* T8ImageViewModel.h */,
 				6DD2CD3A1BF4CC9D0034E6FC /* T8ImageViewModel.m */,
+				6D6A83681BF9D5E400E823AA /* T8BubbledImageViewModel.h */,
+				6D6A83691BF9D5E400E823AA /* T8BubbledImageViewModel.m */,
+				6D6A836B1BF9D5F900E823AA /* T8BubbledImageView.h */,
+				6D6A836C1BF9D5F900E823AA /* T8BubbledImageView.m */,
 			);
 			path = T8ImageViewModel;
 			sourceTree = "<group>";
@@ -455,6 +465,7 @@
 				6DB9EEAA1B18124700355150 /* AppDelegate.m in Sources */,
 				6DD2CD341BF4809B0034E6FC /* T8LetteredAvatarViewModel.m in Sources */,
 				6D5DD7E31BF089350016F2A7 /* T8LabelViewModel.m in Sources */,
+				6D6A836D1BF9D5F900E823AA /* T8BubbledImageView.m in Sources */,
 				6D6A83631BF7394800E823AA /* T8PhotoMessageViewModel.m in Sources */,
 				6DDC0CFC1BEB535E009488B2 /* T8ChatCollectionView.m in Sources */,
 				6D5DD7DD1BF07E240016F2A7 /* T8TextMessageViewModel.m in Sources */,
@@ -467,6 +478,7 @@
 				6D6A83601BF735A700E823AA /* T8BubbleMessageViewModel.m in Sources */,
 				6DD2CD3F1BF584390034E6FC /* T8BubbleBgViewModel.m in Sources */,
 				6DB9EEA71B18124700355150 /* main.m in Sources */,
+				6D6A836A1BF9D5E400E823AA /* T8BubbledImageViewModel.m in Sources */,
 				6D5DD7E61BF0A4C60016F2A7 /* T8TextViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,11 +7,12 @@
 //
 
 #import "T8PhotoMessageViewModel.h"
-#import "T8ImageViewModel.h"
+#import "T8BubbledImageViewModel.h"
+#import <CoreImage/CoreImage.h>
 
 @interface T8PhotoMessageViewModel ()
 {
-    T8ImageViewModel *_imageModel;
+    T8BubbledImageViewModel *_imageModel;
 }
 
 @end
@@ -23,8 +24,11 @@
     self = [super initWithMessage:message];
     if (self) {
         
-        _imageModel = [[T8ImageViewModel alloc] init];
+        _imageModel = [[T8BubbledImageViewModel alloc] init];
+        _imageModel.urlStr = _message.avatar;
+        _imageModel.incoming = _message.incoming;
         [self addSubmodel:_imageModel];
+        
         
     }
     return self;
@@ -52,8 +56,9 @@
 {
     [super bindViewToContainer:container];
     
-    UIImageView *imageView = (UIImageView *)_imageModel.boundView;
-    [imageView sd_setImageWithURL:[NSURL URLWithString:_message.avatar]];
+//    UIImageView *mask = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"T8Chat_text_reciever_mask"] resizableImageWithCapInsets:UIEdgeInsetsMake(30, 30, 10, 10)]];
+//    mask.frame = CGRectMake(0, 0, 100, 100);
+//    [imageView addSubview:mask];
 }
 
 @end
