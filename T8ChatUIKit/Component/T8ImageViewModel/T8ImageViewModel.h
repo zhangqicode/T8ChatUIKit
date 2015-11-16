@@ -7,6 +7,7 @@
 //
 
 #import "T8BaseViewModel.h"
+#import "SDWebImage/UIImageView+WebCache.h"
 
 @interface T8ImageViewModel : T8BaseViewModel
 

@@ -25,12 +25,4 @@
     return self;
 }
 
-- (CGSize)sizeForContainerSize:(CGSize)containerSize
-{
-    if (self.type == 1) {
-        return CGSizeMake(containerSize.width, 50);
-    }
-    return CGSizeZero;
-}
-
 @end
