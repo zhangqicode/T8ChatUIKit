@@ -23,6 +23,7 @@
 
 - (void)bindCell:(T8ChatBaseCollectionViewCell *)cell;
 - (void)unbindCell;
+- (T8ChatBaseCollectionViewCell *)boundCell;
 
 - (T8MessageViewModel *)viewModel;
 - (CGSize)sizeForContainerSize:(CGSize)containerSize;

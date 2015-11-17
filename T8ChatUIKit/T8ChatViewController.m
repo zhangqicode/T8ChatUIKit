@@ -103,12 +103,14 @@
     [UIView performWithoutAnimation:^{
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"chatCell" forIndexPath:indexPath];
         if (cell.boundItem != nil) {
-            [cell.boundItem unbindCell];
+            T8MessageItem *oldItem = cell.boundItem;
+            [oldItem unbindCell];
+        }
+        if (item.boundCell != nil) {
+            [item unbindCell];
         }
         [item bindCell:cell];
     }];
-
-    
     
     return cell;
 }

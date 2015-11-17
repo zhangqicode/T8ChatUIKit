@@ -28,7 +28,7 @@
         [self addSubview:_contentViewForBinding];
         
         self.clipsToBounds = YES;
-        
+
     }
     return self;
 }

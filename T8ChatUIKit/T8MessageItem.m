@@ -88,4 +88,9 @@
     _cell = nil;
 }
 
+- (T8ChatBaseCollectionViewCell *)boundCell
+{
+    return _cell;
+}
+
 @end

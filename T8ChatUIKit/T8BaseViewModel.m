@@ -100,7 +100,6 @@
     
     if (_view) {
         [_view removeFromSuperview];
-//        _view = nil;
     }
 }
 
