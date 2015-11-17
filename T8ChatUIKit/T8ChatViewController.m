@@ -32,7 +32,7 @@
         
         //制作假数据
         _items = [NSMutableArray array];
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 1000; i++) {
             T8MessageModel *model = [[T8MessageModel alloc] init];
             if (i%2 == 0) {
                 model.content = @"tuiaoweufaywgrawheiofjawirghawiufhawiuehfiauwhgauiwfheauyrgawiufhiuwahefauwhrguyawgefuyawgrhuahwufygwaruyfhawiuefhaiuwehfaiuwhguwayegfuyawgruyahfwiuehaiuwrhfauwehawuyefgauywrgauwfhauwirhgiuahfiuwehiuahgiugwauyagfuawhgiuawhfiu";

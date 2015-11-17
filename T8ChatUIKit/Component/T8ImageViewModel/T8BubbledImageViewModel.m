@@ -29,17 +29,28 @@
 {
     [super bindViewToContainer:container];
     
-    __weak typeof(self) weakSelf = self;
-    [[SDWebImageManager sharedManager] downloadImageWithURL:[NSURL URLWithString:self.urlStr] options:0 progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-        weakSelf.bubbleImage = image;
-        T8BubbledImageView *imgView = (T8BubbledImageView *)weakSelf.boundView;
-        if (imgView) {
-            imgView.bubbleImage = image;
-            imgView.incoming = weakSelf.incoming;
-            imgView.backgroundColor = [UIColor clearColor];
-            [imgView setNeedsDisplay];
-        }
-    }];
+    T8BubbledImageView *imgView = (T8BubbledImageView *)self.boundView;
+    imgView.backgroundColor = [UIColor clearColor];
+    imgView.incoming = self.incoming;
+    imgView.layer.drawsAsynchronously = YES;
+    
+    if (self.bubbleImage == nil) {
+        __weak typeof(self) weakSelf = self;
+        [[SDWebImageManager sharedManager] downloadImageWithURL:[NSURL URLWithString:self.urlStr] options:0 progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+            weakSelf.bubbleImage = image;
+            [weakSelf updateBubbleImageView];
+        }];
+    }
+
+}
+
+- (void)updateBubbleImageView
+{
+    T8BubbledImageView *imgView = (T8BubbledImageView *)self.boundView;
+    if (imgView && imgView.bubbleImage != self.bubbleImage) {
+        imgView.bubbleImage = self.bubbleImage;
+        [imgView setNeedsDisplay];
+    }
 }
 
 @end
