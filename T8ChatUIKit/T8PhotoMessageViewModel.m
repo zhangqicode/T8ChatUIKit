@@ -8,7 +8,6 @@
 
 #import "T8PhotoMessageViewModel.h"
 #import "T8BubbledImageViewModel.h"
-#import <CoreImage/CoreImage.h>
 
 @interface T8PhotoMessageViewModel ()
 {
@@ -56,9 +55,6 @@
 {
     [super bindViewToContainer:container];
     
-//    UIImageView *mask = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"T8Chat_text_reciever_mask"] resizableImageWithCapInsets:UIEdgeInsetsMake(30, 30, 10, 10)]];
-//    mask.frame = CGRectMake(0, 0, 100, 100);
-//    [imageView addSubview:mask];
 }
 
 @end

@@ -14,4 +14,6 @@
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic) CGBlendMode blendMode;
 
+- (void)setUrl:(NSString *)imageUrl;
+
 @end

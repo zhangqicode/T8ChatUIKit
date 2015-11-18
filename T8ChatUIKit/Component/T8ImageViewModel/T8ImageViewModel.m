@@ -20,4 +20,12 @@
     [super bindViewToContainer:container];
 }
 
+- (void)setUrl:(NSString *)imageUrl
+{
+    UIImageView *boundView = (UIImageView *)self.boundView;
+    if (boundView) {
+        [boundView sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
+    }
+}
+
 @end

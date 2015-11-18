@@ -12,6 +12,7 @@
 #import "T8TextMessageViewModel.h"
 #import "T8ChatBaseCollectionViewCell.h"
 #import "T8PhotoMessageViewModel.h"
+#import "T8ChannelLinkMessageViewModel.h"
 
 @interface T8MessageItem ()
 {
@@ -62,6 +63,10 @@
         T8PhotoMessageViewModel *photoViewModel = [[T8PhotoMessageViewModel alloc] initWithMessage:message];
         [photoViewModel layoutForContainerSize:containerSize];
         return photoViewModel;
+    }else if (message.type == 3){
+        T8ChannelLinkMessageViewModel *channelLinkViewModel = [[T8ChannelLinkMessageViewModel alloc] initWithMessage:message];
+        [channelLinkViewModel layoutForContainerSize:containerSize];
+        return channelLinkViewModel;
     }
     
     return nil;

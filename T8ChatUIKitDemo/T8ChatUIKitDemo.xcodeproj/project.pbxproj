@@ -15,6 +15,7 @@
 		6D6A836A1BF9D5E400E823AA /* T8BubbledImageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6A83691BF9D5E400E823AA /* T8BubbledImageViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		6D6A836D1BF9D5F900E823AA /* T8BubbledImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6A836C1BF9D5F900E823AA /* T8BubbledImageView.m */; settings = {ASSET_TAGS = (); }; };
 		6D6A83741BFACE0000E823AA /* T8ViewStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6A83731BFACE0000E823AA /* T8ViewStorage.m */; settings = {ASSET_TAGS = (); }; };
+		6D6A838A1BFC212F00E823AA /* T8ChannelLinkMessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6A83891BFC212F00E823AA /* T8ChannelLinkMessageViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		6DB9EEA71B18124700355150 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEA61B18124700355150 /* main.m */; };
 		6DB9EEAA1B18124700355150 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEA91B18124700355150 /* AppDelegate.m */; };
 		6DB9EEAD1B18124700355150 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB9EEAC1B18124700355150 /* ViewController.m */; };
@@ -72,6 +73,8 @@
 		6D6A83721BFACE0000E823AA /* T8ViewStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8ViewStorage.h; sourceTree = "<group>"; };
 		6D6A83731BFACE0000E823AA /* T8ViewStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8ViewStorage.m; sourceTree = "<group>"; };
 		6D6A83751BFACF7300E823AA /* T8View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = T8View.h; sourceTree = "<group>"; };
+		6D6A83881BFC212F00E823AA /* T8ChannelLinkMessageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T8ChannelLinkMessageViewModel.h; sourceTree = "<group>"; };
+		6D6A83891BFC212F00E823AA /* T8ChannelLinkMessageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T8ChannelLinkMessageViewModel.m; sourceTree = "<group>"; };
 		6DB9EEA11B18124700355150 /* T8ChatUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T8ChatUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB9EEA51B18124700355150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DB9EEA61B18124700355150 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -310,6 +313,8 @@
 				6D5DD7DC1BF07E240016F2A7 /* T8TextMessageViewModel.m */,
 				6D6A83611BF7394800E823AA /* T8PhotoMessageViewModel.h */,
 				6D6A83621BF7394800E823AA /* T8PhotoMessageViewModel.m */,
+				6D6A83881BFC212F00E823AA /* T8ChannelLinkMessageViewModel.h */,
+				6D6A83891BFC212F00E823AA /* T8ChannelLinkMessageViewModel.m */,
 				6DD2CD471BF59E770034E6FC /* Resources */,
 				6D5DD7DE1BF0812F0016F2A7 /* Component */,
 			);
@@ -479,6 +484,7 @@
 				6DDC0D081BEDE2D3009488B2 /* T8BaseViewModel.m in Sources */,
 				6DDC0D0E1BF05459009488B2 /* T8MessageViewModel.m in Sources */,
 				6DDC0D0B1BF05256009488B2 /* T8MessageItem.m in Sources */,
+				6D6A838A1BFC212F00E823AA /* T8ChannelLinkMessageViewModel.m in Sources */,
 				6DDC0D051BEC7CAD009488B2 /* T8MessageModel.m in Sources */,
 				6D6A83741BFACE0000E823AA /* T8ViewStorage.m in Sources */,
 				6DD2CD3B1BF4CC9D0034E6FC /* T8ImageViewModel.m in Sources */,
