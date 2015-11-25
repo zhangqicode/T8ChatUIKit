@@ -60,14 +60,14 @@
     [_infoViewModel layoutForContainerSize:CGSizeMake(size.width - 50, 0)];
     
     _titleViewModel.frame = CGRectMake(CGRectGetMaxX(_channelAvatarViewModel.frame) + 10, CGRectGetMinY(_channelAvatarViewModel.frame), _titleViewModel.frame.size.width, _titleViewModel.frame.size.height);
-    _infoViewModel.frame = CGRectMake(CGRectGetMinX(_titleViewModel.frame), CGRectGetMaxY(_titleViewModel.frame) + 10, _infoViewModel.frame.size.width, MIN(_infoViewModel.frame.size.height, 30));
+    _infoViewModel.frame = CGRectMake(CGRectGetMinX(_titleViewModel.frame), CGRectGetMaxY(_titleViewModel.frame) + 3, _infoViewModel.frame.size.width, MIN(_infoViewModel.frame.size.height, 30));
     
     [super layoutForContainerSize:containerSize];
 }
 
 - (CGSize)contentSizeForContainerSize:(CGSize)containerSize
 {
-    return CGSizeMake(170, 60);
+    return CGSizeMake(170, 50);
 }
 
 - (void)bindViewToContainer:(UIView *)container
