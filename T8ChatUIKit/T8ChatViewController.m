@@ -75,7 +75,7 @@
 
 - (void)insertItems:(NSArray *)items insertType:(T8MessageItemInsertType)insertType
 {
-    if (insertType == T8MessageItemInsertTypeSend) {
+    if (insertType == T8MessageItemInsertTypeSend || insertType == T8MessageItemInsertTypeRecieve) {
         [_items insertObject:items.firstObject atIndex:0];
         [_collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:0 inSection:0]]];
     }else if (insertType == T8MessageItemInsertTypeLoadMore){
