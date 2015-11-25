@@ -73,6 +73,24 @@
     [self insertItems:@[item] insertType:T8MessageItemInsertTypeSend];
 }
 
+- (void)loadMoreHistoryMessage
+{
+    NSLog(@"loadMoreHistoryMessage...");
+    
+    NSMutableArray *msgs = [NSMutableArray array];
+    for (int i = 0; i < 20; i++) {
+        T8MessageModel *model = [[T8MessageModel alloc] init];
+        if (rand()%2 == 0) {
+            model.content = @"tuiaoweufaywgrawheiofjawirghawiufhawiuehfiauwhgauiwfheauyrgawiufhiuwahefauwhrguyawgefuyawgrhuahwufygwaruyfhawiuefhaiuwehfaiuwhguwayegfuyawgruyahfwiuehaiuwrhfauwehawuyefgauywrgauwfhauwirhgiuahfiuwehiuahgiugwauyagfuawhgiuawhfiu";
+        }
+        T8MessageItem *item = [[T8MessageItem alloc] initWithMessage:model];
+        
+        [msgs addObject:item];
+    }
+    
+    [self insertItems:msgs insertType:T8MessageItemInsertTypeLoadMore];
+}
+
 - (void)insertItems:(NSArray *)items insertType:(T8MessageItemInsertType)insertType
 {
     if (insertType == T8MessageItemInsertTypeSend || insertType == T8MessageItemInsertTypeRecieve) {
@@ -80,7 +98,12 @@
         [_collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:0 inSection:0]]];
     }else if (insertType == T8MessageItemInsertTypeLoadMore){
         [_items addObjectsFromArray:items];
-        [_collectionView reloadData];
+        NSMutableArray *indexArray = [NSMutableArray array];
+        [items enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSIndexPath *index = [NSIndexPath indexPathForItem:[_items indexOfObject:obj] inSection:0];
+            [indexArray addObject:index];
+        }];
+        [_collectionView insertItemsAtIndexPaths:indexArray];
     }
 }
 
@@ -146,5 +169,17 @@
 
 #pragma mark - UICollectionViewDelegate
 
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView == _collectionView) {
+        /**
+         *  提前loadmore
+         */
+        if (scrollView.contentOffset.y > scrollView.contentSize.height - 800 * 2.0f && scrollView.contentSize.height > FLT_EPSILON) {
+            [self loadMoreHistoryMessage];
+        }
+    }
+}
 
 @end
