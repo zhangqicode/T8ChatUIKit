@@ -7,12 +7,8 @@
 //
 
 #import "T8MessageViewModel.h"
-#import "T8LetteredAvatarViewModel.h"
 
 @interface T8MessageViewModel ()
-{
-    T8LetteredAvatarViewModel *_avatarModel;
-}
 
 @end
 
@@ -24,10 +20,7 @@
     if (self) {
         
         _message = message;
-        
-        _avatarModel = [[T8LetteredAvatarViewModel alloc] init];
-        [self addSubmodel:_avatarModel];
-        
+                
     }
     return self;
 }
@@ -39,18 +32,12 @@
 
 - (void)layoutForContainerSize:(CGSize)containerSize
 {
-    if (_message.incoming) {
-        _avatarModel.frame = CGRectMake(10, 10, 40, 40);
-    }else{
-        _avatarModel.frame = CGRectMake(containerSize.width - 10 - 40, 10, 40, 40);
-    }
+    
 }
 
 - (void)bindViewToContainer:(UIView *)container
 {
-    [super bindViewToContainer:container];
-    
-    [_avatarModel setAvatarUrl:_message.avatar name:_message.name];
+    [super bindViewToContainer:container];    
 }
 
 - (CGSize)contentSizeForContainerSize:(CGSize)containerSize

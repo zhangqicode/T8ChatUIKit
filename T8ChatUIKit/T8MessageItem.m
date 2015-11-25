@@ -13,6 +13,7 @@
 #import "T8ChatBaseCollectionViewCell.h"
 #import "T8PhotoMessageViewModel.h"
 #import "T8ChannelLinkMessageViewModel.h"
+#import "T8SystemMessageViewModel.h"
 
 @interface T8MessageItem ()
 {
@@ -67,6 +68,10 @@
         T8ChannelLinkMessageViewModel *channelLinkViewModel = [[T8ChannelLinkMessageViewModel alloc] initWithMessage:message];
         [channelLinkViewModel layoutForContainerSize:containerSize];
         return channelLinkViewModel;
+    }else if (message.type == 4){
+        T8SystemMessageViewModel *systemViewModel = [[T8SystemMessageViewModel alloc] initWithMessage:message];
+        [systemViewModel layoutForContainerSize:containerSize];
+        return systemViewModel;
     }
     
     return nil;

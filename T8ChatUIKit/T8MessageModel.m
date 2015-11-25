@@ -17,7 +17,7 @@
         
         self.name = @"张琦";
         self.avatar = @"http://7xnjim.com1.z0.glb.clouddn.com/avatar/c0dd782f-4d64-4254-acf0-0bb920af189c";
-        self.type = 1 + rand()%3;
+        self.type = 1 + rand()%4;
         self.content = @"why are you so diao?";
         self.incoming = rand()%2;
         

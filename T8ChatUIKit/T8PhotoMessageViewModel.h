@@ -6,8 +6,8 @@
 //  Copyright © 2015年 琦张. All rights reserved.
 //
 
-#import "T8MessageViewModel.h"
+#import "T8AvatarViewModel.h"
 
-@interface T8PhotoMessageViewModel : T8MessageViewModel
+@interface T8PhotoMessageViewModel : T8AvatarViewModel
 
 @end
