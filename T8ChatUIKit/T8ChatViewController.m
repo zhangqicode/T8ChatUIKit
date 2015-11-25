@@ -32,7 +32,7 @@
         
         //制作假数据
         _items = [NSMutableArray array];
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10; i++) {
             T8MessageModel *model = [[T8MessageModel alloc] init];
             if (i%2 == 0) {
                 model.content = @"tuiaoweufaywgrawheiofjawirghawiufhawiuehfiauwhgauiwfheauyrgawiufhiuwahefauwhrguyawgefuyawgrhuahwufygwaruyfhawiuefhaiuwehfaiuwhguwayegfuyawgruyahfwiuehaiuwrhfauwehawuyefgauywrgauwfhauwirhgiuahfiuwehiuahgiugwauyagfuawhgiuawhfiu";
@@ -47,6 +47,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"send" style:UIBarButtonItemStylePlain target:self action:@selector(sendPressed)];
+    
     self.view.backgroundColor = [UIColor colorWithRed:236/255.0 green:236/255.0 blue:236/255.0 alpha:1];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
@@ -58,6 +60,28 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)sendPressed
+{
+    T8MessageModel *model = [[T8MessageModel alloc] init];
+    if (rand()%2 == 0) {
+        model.content = @"tuiaoweufaywgrawheiofjawirghawiufhawiuehfiauwhgauiwfheauyrgawiufhiuwahefauwhrguyawgefuyawgrhuahwufygwaruyfhawiuefhaiuwehfaiuwhguwayegfuyawgruyahfwiuehaiuwrhfauwehawuyefgauywrgauwfhauwirhgiuahfiuwehiuahgiugwauyagfuawhgiuawhfiu";
+    }
+    T8MessageItem *item = [[T8MessageItem alloc] initWithMessage:model];
+    
+    [self insertItems:@[item] insertType:T8MessageItemInsertTypeSend];
+}
+
+- (void)insertItems:(NSArray *)items insertType:(T8MessageItemInsertType)insertType
+{
+    if (insertType == T8MessageItemInsertTypeSend) {
+        [_items insertObject:items.firstObject atIndex:0];
+        [_collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:0 inSection:0]]];
+    }else if (insertType == T8MessageItemInsertTypeLoadMore){
+        [_items addObjectsFromArray:items];
+        [_collectionView reloadData];
+    }
 }
 
 #pragma mark - setup

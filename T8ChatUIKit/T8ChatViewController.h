@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    T8MessageItemInsertTypeSend,
+    T8MessageItemInsertTypeRecieve,
+    T8MessageItemInsertTypeLoadMore,
+} T8MessageItemInsertType;
+
 @interface T8ChatViewController : UIViewController
+
+- (void)insertItems:(NSArray *)items insertType:(T8MessageItemInsertType)insertType;
 
 @end

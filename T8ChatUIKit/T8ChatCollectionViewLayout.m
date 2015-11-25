@@ -70,4 +70,25 @@
     return _layoutAttributes;
 }
 
+/**
+ *  完善插入单条消息时的动画
+ *
+ *  @param itemIndexPath
+ *
+ *  @return
+ */
+- (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath
+{
+    UICollectionViewLayoutAttributes *attr = [self layoutAttributesForItemAtIndexPath:itemIndexPath];
+
+    if (itemIndexPath.row == 0) {
+        attr.center = CGPointMake(CGRectGetMidX(self.collectionView.bounds), CGRectGetMinY(self.collectionView.bounds));
+        return attr;
+    }
+    
+    return attr;
+}
+
+
+
 @end
