@@ -79,16 +79,21 @@
  */
 - (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath
 {
-    UICollectionViewLayoutAttributes *attr = [self layoutAttributesForItemAtIndexPath:itemIndexPath];
-
-    if (itemIndexPath.row == 0) {
-        attr.center = CGPointMake(CGRectGetMidX(self.collectionView.bounds), CGRectGetMinY(self.collectionView.bounds));
-        return attr;
+    // Must call super
+    UICollectionViewLayoutAttributes *attributes = [super initialLayoutAttributesForAppearingItemAtIndexPath:itemIndexPath];
+    
+    if (itemIndexPath.item == 0)
+    {
+        if (!attributes)
+            attributes = [self layoutAttributesForItemAtIndexPath:itemIndexPath];
+        
+        attributes = [attributes copy];
+        
+        attributes.alpha = 1.0f;
+        attributes.center = CGPointMake(CGRectGetMidX(attributes.frame), -0.5*attributes.frame.size.height);
     }
     
-    return attr;
+    return attributes;
 }
-
-
 
 @end
