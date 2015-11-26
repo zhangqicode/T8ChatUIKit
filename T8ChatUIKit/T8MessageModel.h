@@ -8,14 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "T8Message.h"
 
-@interface T8MessageModel : NSObject
-
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *avatar;
-@property (strong, nonatomic) NSString *content;
-@property (nonatomic) NSInteger type;
-@property (nonatomic) BOOL incoming;
+@interface T8MessageModel : NSObject<T8Message>
 
 - (CGSize)sizeForContainerSize:(CGSize)containerSize;
 

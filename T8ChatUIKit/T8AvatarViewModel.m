@@ -18,7 +18,7 @@
 
 @implementation T8AvatarViewModel
 
-- (id)initWithMessage:(T8MessageModel *)message
+- (id)initWithMessage:(id<T8Message>)message
 {
     self = [super initWithMessage:message];
     if (self) {
@@ -32,7 +32,7 @@
 
 - (void)layoutForContainerSize:(CGSize)containerSize
 {
-    if (_message.incoming) {
+    if (_message.t8_incoming) {
         _avatarModel.frame = CGRectMake(10, 10, 40, 40);
     }else{
         _avatarModel.frame = CGRectMake(containerSize.width - 10 - 40, 10, 40, 40);
@@ -43,7 +43,7 @@
 {
     [super bindViewToContainer:container];
     
-    [_avatarModel setAvatarUrl:_message.avatar name:_message.name];
+    [_avatarModel setAvatarUrl:_message.t8_avatar name:_message.t8_name];
 }
 
 @end

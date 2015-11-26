@@ -7,14 +7,14 @@
 //
 
 #import "T8BaseViewModel.h"
-#import "T8MessageModel.h"
+#import "T8Message.h"
 
 @interface T8MessageViewModel : T8BaseViewModel
 {
-    T8MessageModel *_message;
+    id<T8Message> _message;
 }
 
-- (instancetype)initWithMessage:(T8MessageModel *)message;
+- (instancetype)initWithMessage:(id<T8Message>)message;
 
 - (CGSize)contentSizeForContainerSize:(CGSize)containerSize;
 

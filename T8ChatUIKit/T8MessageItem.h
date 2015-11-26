@@ -8,18 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "T8Message.h"
 
-@class T8MessageModel;
 @class T8MessageViewModel;
 @class T8ChatBaseCollectionViewCell;
 
 @interface T8MessageItem : NSObject
 {
-    @public T8MessageModel *_message;
+    @public id<T8Message> _message;
     T8MessageViewModel *_viewModel;
 }
 
-- (instancetype)initWithMessage:(T8MessageModel *)message;
+- (instancetype)initWithMessage:(id<T8Message>)message;
 
 - (void)bindCell:(T8ChatBaseCollectionViewCell *)cell;
 - (void)unbindCell;

@@ -34,9 +34,6 @@
         _items = [NSMutableArray array];
         for (int i = 0; i < 10; i++) {
             T8MessageModel *model = [[T8MessageModel alloc] init];
-            if (i%2 == 0) {
-                model.content = @"tuiaoweufaywgrawheiofjawirghawiufhawiuehfiauwhgauiwfheauyrgawiufhiuwahefauwhrguyawgefuyawgrhuahwufygwaruyfhawiuefhaiuwehfaiuwhguwayegfuyawgruyahfwiuehaiuwrhfauwehawuyefgauywrgauwfhauwirhgiuahfiuwehiuahgiugwauyagfuawhgiuawhfiu";
-            }
             T8MessageItem *item = [[T8MessageItem alloc] initWithMessage:model];
             [_items addObject:item];
         }
@@ -65,9 +62,6 @@
 - (void)sendPressed
 {
     T8MessageModel *model = [[T8MessageModel alloc] init];
-    if (rand()%2 == 0) {
-        model.content = @"tuiaoweufaywgrawheiofjawirghawiufhawiuehfiauwhgauiwfheauyrgawiufhiuwahefauwhrguyawgefuyawgrhuahwufygwaruyfhawiuefhaiuwehfaiuwhguwayegfuyawgruyahfwiuehaiuwrhfauwehawuyefgauywrgauwfhauwirhgiuahfiuwehiuahgiugwauyagfuawhgiuawhfiu";
-    }
     T8MessageItem *item = [[T8MessageItem alloc] initWithMessage:model];
     
     [self insertItems:@[item] insertType:T8MessageItemInsertTypeSend];
@@ -80,9 +74,6 @@
     NSMutableArray *msgs = [NSMutableArray array];
     for (int i = 0; i < 20; i++) {
         T8MessageModel *model = [[T8MessageModel alloc] init];
-        if (rand()%2 == 0) {
-            model.content = @"tuiaoweufaywgrawheiofjawirghawiufhawiuehfiauwhgauiwfheauyrgawiufhiuwahefauwhrguyawgefuyawgrhuahwufygwaruyfhawiuefhaiuwehfaiuwhguwayegfuyawgruyahfwiuehaiuwrhfauwehawuyefgauywrgauwfhauwirhgiuahfiuwehiuahgiugwauyagfuawhgiuawhfiu";
-        }
         T8MessageItem *item = [[T8MessageItem alloc] initWithMessage:model];
         
         [msgs addObject:item];

@@ -18,12 +18,12 @@
 
 @implementation T8TextMessageViewModel
 
-- (instancetype)initWithMessage:(T8MessageModel *)message
+- (instancetype)initWithMessage:(id<T8Message>)message
 {
     self = [super initWithMessage:message];
     if (self) {
-        
-        _textModel = [[T8TextViewModel alloc] initWithText:message.content font:[UIFont systemFontOfSize:14]];
+
+        _textModel = [[T8TextViewModel alloc] initWithText:[message t8_content] font:[UIFont systemFontOfSize:14]];
         _textModel.textColor = [UIColor blackColor];
         
         [self addSubmodel:_textModel];
@@ -40,7 +40,7 @@
     self.frame = CGRectMake(0, 0, containerSize.width, MAX(60, contentSize.height + 36));
     
     contentSize.height = MAX(contentSize.height, 24);
-    if (_message.incoming) {
+    if (_message.t8_incoming) {
         _textModel.frame = CGRectMake(75, 18, contentSize.width, contentSize.height);
     }else{
         _textModel.frame = CGRectMake(containerSize.width - 75 - contentSize.width, 18, contentSize.width, contentSize.height);

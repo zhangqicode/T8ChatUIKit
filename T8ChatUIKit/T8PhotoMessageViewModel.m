@@ -18,14 +18,14 @@
 
 @implementation T8PhotoMessageViewModel
 
-- (instancetype)initWithMessage:(T8MessageModel *)message
+- (instancetype)initWithMessage:(id<T8Message>)message
 {
     self = [super initWithMessage:message];
     if (self) {
         
         _imageModel = [[T8BubbledImageViewModel alloc] init];
-        _imageModel.urlStr = _message.avatar;
-        _imageModel.incoming = _message.incoming;
+        _imageModel.urlStr = [_message t8_avatar];
+        _imageModel.incoming = [_message t8_incoming];
         [self addSubmodel:_imageModel];
         
         
@@ -37,7 +37,7 @@
 {
     CGSize size = [self contentSizeForContainerSize:containerSize];
     self.frame = CGRectMake(0, 0, containerSize.width, MAX(size.height + 20, 60));
-    if (_message.incoming) {
+    if ([_message t8_incoming]) {
         _imageModel.frame = CGRectMake(60, 10, size.width, size.height);
     }else{
         _imageModel.frame = CGRectMake(containerSize.width - 60 - size.width, 10, size.width, size.height);

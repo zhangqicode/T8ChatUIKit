@@ -21,7 +21,7 @@
 
 @implementation T8ChannelLinkMessageViewModel
 
-- (id)initWithMessage:(T8MessageModel *)message
+- (id)initWithMessage:(id<T8Message>)message
 {
     self = [super initWithMessage:message];
     if (self) {
@@ -30,14 +30,14 @@
         [self addSubmodel:_channelAvatarViewModel];
         
         _titleViewModel = [[T8TextViewModel alloc] initWithText:@"点击申请" font:[UIFont systemFontOfSize:14]];
-        if (_message.incoming) {
+        if (_message.t8_incoming) {
             _titleViewModel.textColor = [UIColor colorWithRed:51/255.0 green:194/255.0 blue:32/255.0 alpha:1];
         }else{
             _titleViewModel.textColor = [UIColor colorWithRed:0/255.0 green:128/255.0 blue:245/255.0 alpha:1];
         }
         [self addSubmodel:_titleViewModel];
         
-        NSString *info = [NSString stringWithFormat:@"%@ #%@", _message.name, _message.content];
+        NSString *info = [NSString stringWithFormat:@"%@ #%@", [_message t8_name], [_message t8_content]];
         _infoViewModel = [[T8TextViewModel alloc] initWithText:info font:[UIFont systemFontOfSize:12]];
         _infoViewModel.textColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];
         [self addSubmodel:_infoViewModel];
@@ -50,7 +50,7 @@
     CGSize size = [self contentSizeForContainerSize:containerSize];
     self.frame = CGRectMake(0, 0, containerSize.width, size.height + 36);
     
-    if (_message.incoming) {
+    if ([_message t8_incoming]) {
         _channelAvatarViewModel.frame = CGRectMake(75, 18, 40, 40);
     }else{
         _channelAvatarViewModel.frame = CGRectMake(containerSize.width - 75 - size.width, 18, 40, 40);
@@ -74,7 +74,7 @@
 {
     [super bindViewToContainer:container];
     
-    [_channelAvatarViewModel setUrl:_message.avatar];
+    [_channelAvatarViewModel setUrl:[_message t8_avatar]];
 }
 
 @end

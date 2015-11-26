@@ -56,19 +56,19 @@
 
 - (T8MessageViewModel *)createMessageViewModel:(T8MessageModel *)message containerSize:(CGSize)containerSize
 {
-    if (message.type == 1) {
+    if ([message t8_mediaType] == 1) {
         T8TextMessageViewModel *textViewModel = [[T8TextMessageViewModel alloc] initWithMessage:message];
         [textViewModel layoutForContainerSize:containerSize];
         return textViewModel;
-    }else if (message.type == 2){
+    }else if ([message t8_mediaType] == 2){
         T8PhotoMessageViewModel *photoViewModel = [[T8PhotoMessageViewModel alloc] initWithMessage:message];
         [photoViewModel layoutForContainerSize:containerSize];
         return photoViewModel;
-    }else if (message.type == 3){
+    }else if ([message t8_mediaType] == 3){
         T8ChannelLinkMessageViewModel *channelLinkViewModel = [[T8ChannelLinkMessageViewModel alloc] initWithMessage:message];
         [channelLinkViewModel layoutForContainerSize:containerSize];
         return channelLinkViewModel;
-    }else if (message.type == 4){
+    }else if ([message t8_mediaType] == 4){
         T8SystemMessageViewModel *systemViewModel = [[T8SystemMessageViewModel alloc] initWithMessage:message];
         [systemViewModel layoutForContainerSize:containerSize];
         return systemViewModel;

@@ -18,14 +18,14 @@
 
 @implementation T8BubbleMessageViewModel
 
-- (instancetype)initWithMessage:(T8MessageModel *)message
+- (instancetype)initWithMessage:(id<T8Message>)message
 {
     self = [super initWithMessage:message];
     if (self) {
         
         _message = message;
         
-        _bubbleBgModel = [[T8BubbleBgViewModel alloc] initWithType:_message.incoming?T8BubbleBgTypeIncoming:T8BubbleBgTypeOutgoing];
+        _bubbleBgModel = [[T8BubbleBgViewModel alloc] initWithType:[_message t8_incoming]?T8BubbleBgTypeIncoming:T8BubbleBgTypeOutgoing];
         [self addSubmodel:_bubbleBgModel];
         
     }
@@ -38,7 +38,7 @@
     CGSize contentSize = [self contentSizeForContainerSize:contentContainerSize];
     contentSize.width = MAX(contentSize.width, 60) + 30;
     contentSize.height = MAX(contentSize.height + 30, 54);
-    if (_message.incoming) {
+    if ([_message t8_incoming]) {
         _bubbleBgModel.frame = CGRectMake(60, 7.5, contentSize.width, contentSize.height);
     }else{
         _bubbleBgModel.frame = CGRectMake(containerSize.width - contentSize.width - 60, 7.5, contentSize.width, contentSize.height);

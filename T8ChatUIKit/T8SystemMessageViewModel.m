@@ -18,7 +18,7 @@
 
 @implementation T8SystemMessageViewModel
 
-- (id)initWithMessage:(T8MessageModel *)message
+- (id)initWithMessage:(id<T8Message>)message
 {
     self = [super initWithMessage:message];
     if (self) {
